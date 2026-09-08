@@ -179,6 +179,16 @@ button,input,textarea,select{font:inherit;color:inherit}
   border:1px solid var(--line-2);background:var(--white);color:var(--text);
   padding:15px 22px;font-size:14.5px;
 }
+/* Variante da tag que abriga o logotipo do convênio: a caixa tem altura fixa e
+   cada logo recebe seu próprio --logo-h para equilibrar opticamente marcas de
+   proporções diferentes (o lockup do Bradesco Saúde tem duas linhas). */
+.tag--logo{
+  display:flex;align-items:center;justify-content:center;
+  padding:14px 24px;min-width:172px;min-height:70px;
+}
+.tag--logo img{
+  display:block;width:auto;height:var(--logo-h,28px);max-width:100%;object-fit:contain;
+}
 
 /* ---------- Cabeçalho ---------- */
 /* Fixo e transparente sobre o hero; solido a partir do momento em que o
@@ -867,9 +877,18 @@ button,input,textarea,select{font:inherit;color:inherit}
     <div class="reveal" style="display:grid;gap:16px;border-top:1px solid var(--line);padding-top:clamp(24px,3vw,40px)">
       <span class="eyebrow">Convênios atendidos</span>
       <div style="display:flex;flex-wrap:wrap;gap:12px">
-        <span class="tag">Bradesco Saúde</span>
-        <span class="tag">SulAmérica</span>
-        <span class="tag">Mediservice</span>
+        <span class="tag tag--logo">
+          <img src="assets/convenios/bradesco-saude.svg" alt="Bradesco Saúde"
+               width="971" height="346" loading="lazy" decoding="async" style="--logo-h:38px" />
+        </span>
+        <span class="tag tag--logo">
+          <img src="assets/convenios/sulamerica.svg" alt="SulAmérica"
+               width="500" height="128" loading="lazy" decoding="async" style="--logo-h:24px" />
+        </span>
+        <span class="tag tag--logo">
+          <img src="assets/convenios/mediservice.png" alt="Mediservice"
+               width="834" height="251" loading="lazy" decoding="async" style="--logo-h:34px" />
+        </span>
       </div>
       <p class="body" style="font-size:13.5px">Consulte a secretaria para confirmar a cobertura do
         seu plano e os procedimentos autorizados.</p>
