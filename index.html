@@ -184,10 +184,16 @@ button,input,textarea,select{font:inherit;color:inherit}
    proporções diferentes (o lockup do Bradesco Saúde tem duas linhas). */
 .tag--logo{
   display:flex;align-items:center;justify-content:center;
-  padding:14px 24px;min-width:172px;min-height:70px;
+  padding:14px 20px;min-height:70px;
 }
 .tag--logo img{
   display:block;width:auto;height:var(--logo-h,28px);max-width:100%;object-fit:contain;
+}
+/* Grade dos convenios: 3 colunas quando cabe, 2 no celular, sem largura minima
+   fixa (que forcava uma marca por linha). */
+.conv-grid{
+  display:grid;gap:12px;max-width:600px;
+  grid-template-columns:repeat(auto-fit,minmax(min(100%,132px),1fr));
 }
 
 /* ---------- Cabeçalho ---------- */
@@ -223,7 +229,10 @@ button,input,textarea,select{font:inherit;color:inherit}
 }
 .header.is-solid .header__inner{min-height:64px;padding-top:9px;padding-bottom:9px}
 
-.brand{display:grid;gap:6px;flex:0 0 auto}
+/* flex:0 1 auto + min-width:0 — sem isso o lockup (300px de largura fixa,
+   ditada pelo aspect-ratio) empurra o botao de menu para fora da tela em
+   telas de ate ~414px. */
+.brand{display:grid;gap:6px;flex:0 1 auto;min-width:0}
 /* Duas versoes do lockup em cross-fade: branco sobre o hero, marinho depois */
 .brand__logo{
   position:relative;display:block;height:38px;aspect-ratio:506/64;
@@ -265,7 +274,11 @@ button,input,textarea,select{font:inherit;color:inherit}
 .burger{
   display:none;
   width:52px;height:52px;background:none;border:1px solid rgba(243,240,239,.4);
-  cursor:pointer;padding:0;place-items:center;
+  cursor:pointer;padding:0;
+  /* place-content:center e obrigatorio: sem ele as tres linhas viram linhas de
+     grade esticadas na altura de 52px, ficam ~20px distantes entre si e o
+     translateY(7.5px) do estado aberto nao as sobrepoe — o "X" saia como ">". */
+  place-items:center;place-content:center;
   transition:border-color .3s var(--ease);
 }
 .burger:hover{border-color:var(--gold)}
@@ -391,6 +404,9 @@ button,input,textarea,select{font:inherit;color:inherit}
   transform:translateY(120%);opacity:0;pointer-events:none;
   transition:transform .5s var(--ease),opacity .4s var(--ease),background .35s var(--ease);
 }
+.foot-role{
+  font-size:11.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);
+}
 .float-wa.is-visible{transform:none;opacity:1;pointer-events:auto}
 .float-wa:hover{background:var(--gold);color:#fff}
 .float-wa svg{width:20px;height:20px;flex:0 0 auto}
@@ -449,6 +465,18 @@ button,input,textarea,select{font:inherit;color:inherit}
   .nav__links a::after{display:none}
   .nav__cta{display:none}
   .burger{display:grid}
+
+  /* A partir daqui o site ja se considera "compacto" (menu em hamburguer), e
+     na pratica e onde ele e usado no toque. Os links de texto empilhados tinham
+     24–27px de altura. A altura vem de padding real, nao de um pseudo-elemento
+     invisivel: com 8–10px de gap, areas de 44px sobrepostas roubariam o toque
+     do vizinho de baixo. O respiro extra tambem separa melhor as listas. */
+  .unit a:not(.btn):not(.link-gold),
+  footer a{display:inline-block;padding-block:11px}
+  /* No link dourado a folga vai toda para cima: o sublinhado continua colado
+     ao texto, como no desktop. */
+  .link-gold{padding-top:17px}
+  .brand{min-height:44px;align-content:center}
 }
 
 /* Telas baixas (notebooks 768/800px de altura): aperta o hero para caber */
@@ -463,15 +491,33 @@ button,input,textarea,select{font:inherit;color:inherit}
   .hero{min-height:0}
   .hero__media{min-height:0;aspect-ratio:1/1;max-height:58vh}
   .hero__media img{height:100%}
+
+  /* O lockup acompanha a largura da tela para o botao de menu sempre caber.
+     A regra antiga mirava `.brand img`, que e absoluto dentro de .brand__logo
+     e por isso ignorava a altura — o lockup continuava com 300px. */
+  .header__inner{gap:12px}
+  .brand__logo{height:clamp(26px,7.4vw,36px)}
+  .header.is-solid .brand__logo{height:clamp(24px,6.6vw,31px)}
+
+  /* Listas longas das areas de atuacao: entrelinha e respiros menores encurtam
+     bastante a rolagem sem apertar a leitura. */
+  .area{gap:22px}
+  .area__group li{font-size:15px;line-height:1.65}
+  .area__group{gap:6px}
+  .label{font-size:11.5px;letter-spacing:.18em}
+  .quote p{font-size:16px}
+
+  /* 16px evita o zoom automatico do iOS ao focar um campo. */
+  .form input,.form textarea,.form select{font-size:16px}
 }
 @media (max-width:560px){
   :root{--header-h:70px}
-  .brand img{height:32px}
-  .brand span{font-size:9px;letter-spacing:.14em}
   .hero__ctas .btn{width:100%}
   .hero__ctas{gap:10px}
   .float-wa em{display:none}
   .float-wa{padding:16px;min-width:56px;justify-content:center}
+  .tag--logo{padding:12px 14px;min-height:64px}
+  .btn{padding:16px 22px}
 }
 
 @media print{
@@ -876,7 +922,7 @@ button,input,textarea,select{font:inherit;color:inherit}
 
     <div class="reveal" style="display:grid;gap:16px;border-top:1px solid var(--line);padding-top:clamp(24px,3vw,40px)">
       <span class="eyebrow">Convênios atendidos</span>
-      <div style="display:flex;flex-wrap:wrap;gap:12px">
+      <div class="conv-grid">
         <span class="tag tag--logo">
           <img src="assets/convenios/bradesco-saude.svg" alt="Bradesco Saúde"
                width="971" height="346" loading="lazy" decoding="async" style="--logo-h:38px" />
@@ -984,7 +1030,7 @@ button,input,textarea,select{font:inherit;color:inherit}
     <div style="display:grid;gap:12px;justify-items:start">
       <img src="assets/logo-vertical-white.svg" alt="Dr. Alberto Fagali"
            width="415" height="157" loading="lazy" style="width:180px;height:auto" />
-      <span style="font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)">Cirurgia do Aparelho Digestivo</span>
+      <span class="foot-role">Cirurgia do Aparelho Digestivo</span>
     </div>
 
     <nav style="display:grid;gap:10px;font-size:14px;line-height:1.7" aria-label="Navegação do rodapé">
