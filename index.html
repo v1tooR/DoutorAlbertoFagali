@@ -1,0 +1,1244 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Dr. Alberto Fagali — Cirurgião do Aparelho Digestivo | Bariátrica e Metabólica</title>
+<meta name="description" content="Cirurgia do aparelho digestivo e cirurgia bariátrica e metabólica em São José dos Campos e Taubaté. Indicação individualizada, técnicas minimamente invasivas e acompanhamento próximo. CRM-SP 135.929 | RQE 564531." />
+<meta name="author" content="Dr. Alberto João Berra Fagali" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<meta name="theme-color" content="#0B1D2D" />
+<link rel="canonical" href="https://www.dralbertofagali.com.br/" />
+
+<!-- Open Graph / redes sociais -->
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="pt_BR" />
+<meta property="og:site_name" content="Dr. Alberto Fagali" />
+<meta property="og:title" content="Dr. Alberto Fagali — Cirurgião do Aparelho Digestivo" />
+<meta property="og:description" content="Cirurgia do aparelho digestivo, bariátrica e metabólica, com indicação individualizada e acompanhamento próximo em todas as etapas." />
+<meta property="og:url" content="https://www.dralbertofagali.com.br/" />
+<meta property="og:image" content="https://www.dralbertofagali.com.br/assets/retrato-escuro.webp" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" href="assets/logo-simbolo-navy.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/logo-simbolo-navy.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="assets/web/retrato-escuro-1400.webp"
+      imagesrcset="assets/web/retrato-escuro-800.webp 800w, assets/web/retrato-escuro-1400.webp 1400w"
+      imagesizes="(max-width:760px) 100vw, 50vw" fetchpriority="high" />
+
+<style>
+/* =========================================================================
+   Dr. Alberto Fagali — Landing Page
+   Tokens e componentes conforme o Design System oficial da marca.
+   Tipografia: Termina (títulos) + Manrope (texto). Enquanto a licença da
+   Termina não for aplicada, a Archivo variável assume como fallback.
+   Para ativar a Termina licenciada, declare o @font-face abaixo:
+     @font-face { font-family:"Termina"; src:url("assets/fonts/termina-bold.woff2") format("woff2");
+                  font-weight:700; font-display:swap; }
+   ========================================================================= */
+
+:root{
+  /* Paleta oficial — sem cores auxiliares fora dela */
+  --navy:#0B1D2D;
+  --navy-2:#0E2334;
+  --navy-line:#1D3040;
+  --navy-deep:#071522;
+  --gold:#B28A4E;
+  --gold-dark:#8A6A3A;   /* dourado escurecido: texto pequeno em fundo claro */
+  --gold-light:#C9A469;
+  --gray:#6B7077;
+  --off:#F3F0EF;
+  --white:#fff;
+
+  --line:#E4E0DE;
+  --line-2:#DDD8D6;
+  --text:#0B1D2D;
+  --text-soft:#4A555F;
+  --text-mute:#5B646C;
+  --on-navy:#C3C8CC;
+
+  --font-body:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-display:"Termina","Archivo",var(--font-body);
+
+  --ease:cubic-bezier(.2,.7,.2,1);
+  --pad-x:clamp(20px,5vw,80px);
+  --sec-y:clamp(48px,7vw,110px);
+  --header-h:76px;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-h) + 8px)}
+body{
+  margin:0;
+  font-family:var(--font-body);
+  font-size:16px;
+  color:var(--text);
+  background:var(--off);
+  line-height:1.6;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+img{height:auto}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,p,blockquote,figure{margin:0}
+ul{margin:0;padding:0;list-style:none}
+button,input,textarea,select{font:inherit;color:inherit}
+
+/* Foco visível — acessibilidade */
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.on-navy :focus-visible{outline-color:var(--gold-light)}
+
+.skip{
+  position:absolute;left:-9999px;top:0;z-index:100;
+  background:var(--navy);color:var(--off);padding:14px 20px;font-weight:700;font-size:14px;
+}
+.skip:focus{left:0}
+
+/* ---------- Tipografia ---------- */
+.display{
+  font-family:var(--font-display);
+  font-stretch:108%;
+  font-weight:700;
+  letter-spacing:-.015em;
+  line-height:1.12;
+}
+.t-h1{font-size:clamp(32px,4.8vw,60px);line-height:1.04;letter-spacing:-.02em}
+.t-h2{font-size:clamp(26px,3.6vw,46px);line-height:1.1;letter-spacing:-.02em}
+.t-h3{font-size:clamp(19px,2vw,25px);line-height:1.25;font-stretch:104%}
+.eyebrow{
+  font-size:11.5px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--gold-dark);
+}
+.on-navy .eyebrow,.eyebrow--gold{color:var(--gold)}
+.label{
+  font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dark);
+}
+.on-navy .label{color:var(--gold)}
+.lead{font-size:clamp(16px,1.5vw,20px);font-weight:700;line-height:1.5}
+.body{font-size:15.5px;line-height:1.85;color:var(--text-soft);text-wrap:pretty}
+.on-navy .body{color:var(--on-navy)}
+.rule{width:34px;height:2px;background:var(--gold)}
+
+/* ---------- Layout ---------- */
+.section{padding:var(--sec-y) var(--pad-x)}
+.stack{display:grid;gap:clamp(28px,4vw,52px)}
+.head-block{display:grid;gap:14px;max-width:60ch}
+.on-navy{background:var(--navy);color:var(--off)}
+.on-white{background:var(--white)}
+
+/* Grade de cartões com filetes contínuos (padrão editorial da marca) */
+.grid-rules{
+  display:grid;gap:0;
+  border-top:1px solid var(--line);
+  border-left:1px solid var(--line);
+}
+.grid-rules > *{
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+.on-navy .grid-rules,.grid-rules--navy{border-color:var(--navy-line)}
+.grid-rules--navy > *{border-color:var(--navy-line)}
+.cols-3{grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr))}
+.cols-2{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+
+/* ---------- Botões ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:17px 30px;
+  font-size:15px;font-weight:700;letter-spacing:.04em;
+  border:1px solid transparent;cursor:pointer;text-align:center;
+  transition:background .35s var(--ease),color .35s var(--ease),transform .35s var(--ease),border-color .35s var(--ease);
+}
+.btn:hover{transform:translateY(-2px)}
+.btn--gold{background:var(--gold);color:#fff}
+.btn--gold:hover{background:var(--gold-light);color:var(--navy)}
+.btn--navy{background:var(--navy);color:var(--off)}
+.btn--navy:hover{background:var(--gold);color:#fff}
+.btn--ghost{border-color:var(--navy);color:var(--navy)}
+.btn--ghost:hover{background:var(--navy);color:var(--off);transform:none}
+.btn--ghost-light{border-color:#56646F;color:var(--off)}
+.btn--ghost-light:hover{background:var(--off);color:var(--navy);transform:none}
+.btn--sm{min-height:48px;padding:13px 22px;font-size:14px}
+
+.link-gold{
+  justify-self:start;
+  color:var(--gold-dark);font-size:14.5px;font-weight:700;
+  border-bottom:1px solid #D8C7AC;padding-bottom:3px;
+  transition:color .3s var(--ease),border-color .3s var(--ease);
+}
+.link-gold:hover{color:var(--gold-dark);border-color:var(--gold-dark)}
+.on-navy .link-gold{color:var(--gold);border-color:#5A4A32}
+.on-navy .link-gold:hover{color:var(--gold-light);border-color:var(--gold)}
+
+.tag{
+  border:1px solid var(--line-2);background:var(--white);color:var(--text);
+  padding:15px 22px;font-size:14.5px;
+}
+
+/* ---------- Cabeçalho ---------- */
+/* Fixo e transparente sobre o hero; solido a partir do momento em que o
+   hero sai de cena. Recolhe ao descer, reaparece ao subir.               */
+.header{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:transparent;
+  border-bottom:1px solid transparent;
+  transition:background .45s var(--ease),border-color .45s var(--ease),
+             box-shadow .45s var(--ease),transform .45s var(--ease);
+}
+.header.is-solid{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:saturate(150%) blur(10px);
+  border-bottom-color:var(--line);
+  box-shadow:0 10px 30px -26px rgba(11,29,45,.6);
+}
+.header.is-hidden{transform:translateY(-100%)}
+
+/* Barra de progresso de leitura */
+.header::after{
+  content:"";position:absolute;left:0;bottom:-1px;height:2px;width:100%;
+  background:var(--gold);transform:scaleX(var(--progress,0));transform-origin:left;
+  opacity:0;transition:opacity .45s var(--ease);
+}
+.header.is-solid::after{opacity:1}
+
+.header__inner{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+  padding:12px var(--pad-x);min-height:var(--header-h);
+  transition:min-height .45s var(--ease),padding .45s var(--ease);
+}
+.header.is-solid .header__inner{min-height:64px;padding-top:9px;padding-bottom:9px}
+
+.brand{display:grid;gap:6px;flex:0 0 auto}
+/* Duas versoes do lockup em cross-fade: branco sobre o hero, marinho depois */
+.brand__logo{
+  position:relative;display:block;height:38px;aspect-ratio:506/64;
+  transition:height .45s var(--ease),transform .45s var(--ease);
+}
+.brand__logo img{
+  position:absolute;inset:0;height:100%;width:100%;
+  transition:opacity .45s var(--ease);
+}
+.brand__logo .logo--dark{opacity:0}
+.header.is-solid .brand__logo{height:31px}
+.header.is-solid .brand__logo .logo--light{opacity:0}
+.header.is-solid .brand__logo .logo--dark{opacity:1}
+.brand:hover .brand__logo{transform:translateY(-1px) scale(1.02)}
+.nav{display:flex;align-items:center;gap:clamp(16px,1.9vw,30px)}
+.nav__links{display:flex;align-items:center;gap:clamp(16px,1.9vw,30px)}
+.nav__links a{
+  font-size:14px;font-weight:500;color:var(--off);
+  padding:6px 0;position:relative;
+  transition:color .3s var(--ease);
+}
+.header.is-solid .nav__links a{color:var(--navy)}
+/* CTA do topo: dourado sobre o hero, marinho quando o header fica solido */
+.nav__cta{background:var(--gold);color:#fff}
+.nav__cta:hover{background:var(--gold-light);color:var(--navy)}
+.header.is-solid .nav__cta{background:var(--navy);color:var(--off)}
+.header.is-solid .nav__cta:hover{background:var(--gold);color:#fff}
+.nav__links a::after{
+  content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform .35s var(--ease);
+}
+.nav__links a:hover{color:var(--gold)}
+.nav__links a:hover::after,.nav__links a[aria-current="true"]::after{transform:scaleX(1)}
+.nav__links a[aria-current="true"]{color:var(--gold)}
+.header.is-solid .nav__links a:hover,
+.header.is-solid .nav__links a[aria-current="true"]{color:var(--gold-dark)}
+
+.burger{
+  display:none;
+  width:52px;height:52px;background:none;border:1px solid rgba(243,240,239,.4);
+  cursor:pointer;padding:0;place-items:center;
+  transition:border-color .3s var(--ease);
+}
+.burger:hover{border-color:var(--gold)}
+.header.is-solid .burger{border-color:var(--line-2)}
+.header.is-solid .burger:hover{border-color:var(--navy)}
+.burger span{display:block;width:22px;height:1.5px;background:var(--off);transition:transform .3s var(--ease),opacity .2s linear,background .45s var(--ease)}
+.header.is-solid .burger span{background:var(--navy)}
+.burger span + span{margin-top:6px}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;
+  background:var(--navy);color:var(--off);
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));
+  min-height:100vh;
+  min-height:100svh;   /* cabe inteiro na tela, sem cortar os botoes */
+}
+.hero__text{
+  padding:calc(var(--header-h) + clamp(16px,4vh,52px)) var(--pad-x) clamp(26px,5vh,64px);
+  display:grid;align-content:center;gap:clamp(14px,2.4vh,30px);
+}
+.hero__title-group{display:grid;gap:16px}
+.hero__line{height:1px;background:var(--gold);transform-origin:left}
+.hero__role{font-size:clamp(15px,1.5vw,19px);font-weight:700;line-height:1.5}
+.hero__crm{font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--gold)}
+.hero__sub{font-size:clamp(15px,1.4vw,18px);line-height:1.8;color:var(--on-navy);max-width:52ch;text-wrap:pretty}
+.hero__ctas{display:flex;flex-wrap:wrap;gap:14px}
+/* A foto e posicionada de forma absoluta para nao empurrar a altura do
+   hero com a propria proporcao (2:3) — quem manda na altura e o 100svh. */
+.hero__media{position:relative;overflow:hidden;background:var(--navy-2);min-height:0}
+.hero__media img{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;object-position:50% 18%;
+}
+.hero__trust{
+  display:flex;flex-wrap:wrap;gap:10px 26px;
+  padding-top:4px;font-size:13px;color:var(--on-navy);
+}
+.hero__trust li{display:inline-flex;align-items:center;gap:9px}
+.hero__trust svg{width:16px;height:16px;color:var(--gold);flex:0 0 auto}
+
+/* ---------- Cartoes ---------- */
+.pillar{
+  background:var(--white);padding:clamp(28px,3.4vw,52px);
+  display:grid;gap:18px;align-content:start;
+}
+.pillar__num{
+  font-family:var(--font-display);font-stretch:108%;font-weight:700;
+  font-size:13px;letter-spacing:.1em;color:var(--gold);
+}
+.area{
+  background:var(--navy-2);padding:clamp(26px,3vw,40px);
+  display:flex;flex-direction:column;gap:26px;
+}
+/* Em cards mais curtos, o link fica ancorado na base da coluna */
+.area > .link-gold{margin-top:auto;align-self:flex-start}
+.area__icon{width:34px;height:34px;color:var(--gold)}
+.area__group{display:grid;gap:8px}
+.area__group li{font-size:14.5px;line-height:1.9;color:var(--on-navy)}
+.tech{
+  background:var(--off);padding:clamp(22px,2.6vw,32px);
+  display:grid;gap:10px;
+}
+.tech strong{font-family:var(--font-display);font-stretch:104%;font-size:19px;font-weight:700}
+.tech span{font-size:15px;line-height:1.8;color:var(--text-soft)}
+.diff{
+  background:var(--white);padding:20px 22px;
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:16px;align-items:center;
+}
+.diff i{width:26px;height:2px;background:var(--gold);display:block}
+.diff span{font-size:14.5px;line-height:1.65}
+.quote{
+  background:var(--off);border-left:2px solid var(--gold);
+  padding:clamp(22px,2.6vw,32px);display:grid;gap:14px;
+}
+.quote p{font-size:17px;font-weight:500;line-height:1.65}
+.quote cite{font-size:12.5px;color:var(--text-mute);letter-spacing:.06em;font-style:normal}
+.pull{
+  font-size:clamp(16px,1.6vw,20px);font-weight:700;line-height:1.6;color:var(--navy);
+  border-left:2px solid var(--gold);padding-left:20px;text-wrap:pretty;
+}
+.unit{
+  background:var(--navy-2);padding:clamp(26px,3vw,40px);
+  display:grid;gap:12px;align-content:start;
+}
+.unit .name{font-family:var(--font-display);font-stretch:104%;font-size:20px;font-weight:700;color:var(--off)}
+.unit address{font-style:normal;font-size:14.5px;line-height:1.8;color:var(--on-navy)}
+.unit__links{display:flex;flex-wrap:wrap;gap:18px;padding-top:4px}
+
+/* ---------- Formulario ---------- */
+.form{
+  background:var(--navy-2);padding:clamp(26px,3vw,40px);
+  display:grid;gap:18px;align-content:start;
+}
+.form label{
+  display:grid;gap:8px;
+  font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy);
+}
+.form input,.form textarea,.form select{
+  font-family:var(--font-body);font-size:15px;font-weight:400;letter-spacing:normal;text-transform:none;
+  color:var(--off);background:rgba(255,255,255,.04);
+  border:1px solid var(--navy-line);padding:15px 16px;min-height:52px;
+  outline:none;border-radius:0;-webkit-appearance:none;appearance:none;
+  transition:border-color .3s var(--ease),background .3s var(--ease);
+}
+.form textarea{min-height:auto;resize:vertical}
+.form select option{background:var(--navy-2);color:var(--off)}
+.form ::placeholder{color:#7C8A95;opacity:1}
+.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--gold);background:rgba(255,255,255,.07)}
+.form__note{font-size:12.5px;line-height:1.6;color:var(--on-navy)}
+
+/* ---------- WhatsApp flutuante ---------- */
+.float-wa{
+  position:fixed;right:clamp(14px,3vw,28px);bottom:clamp(14px,3vw,28px);z-index:45;
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--navy);color:var(--off);
+  padding:14px 20px;min-height:56px;
+  font-size:14px;font-weight:700;letter-spacing:.03em;
+  box-shadow:0 18px 40px -22px rgba(11,29,45,.85);
+  transform:translateY(120%);opacity:0;pointer-events:none;
+  transition:transform .5s var(--ease),opacity .4s var(--ease),background .35s var(--ease);
+}
+.float-wa.is-visible{transform:none;opacity:1;pointer-events:auto}
+.float-wa:hover{background:var(--gold);color:#fff}
+.float-wa svg{width:20px;height:20px;flex:0 0 auto}
+.float-wa em{font-style:normal}
+
+/* ---------- Movimento ----------
+   Entradas uma unica vez, curva cubic-bezier(.2,.7,.2,1).
+   Revelacao por IntersectionObserver: suporte universal de navegador.   */
+@keyframes af-blur{from{opacity:0;filter:blur(14px);transform:translateY(16px)}to{opacity:1;filter:blur(0);transform:none}}
+@keyframes af-line{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes af-rise-in{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes af-zoom{from{transform:scale(1.16)}to{transform:scale(1)}}
+
+.hero__title{animation:af-blur 1.2s var(--ease) .15s both}
+.hero__line{animation:af-line 1s var(--ease) .55s both}
+.hero__role{animation:af-rise-in 1s var(--ease) .6s both}
+.hero__crm{animation:af-rise-in 1s var(--ease) .7s both}
+.hero__sub{animation:af-rise-in 1s var(--ease) .8s both}
+.hero__ctas{animation:af-rise-in 1s var(--ease) .9s both}
+.hero__trust{animation:af-rise-in 1s var(--ease) 1s both}
+.hero__media img{animation:af-zoom 1.8s var(--ease) .1s both}
+
+/* Só escondemos para animar quando ha JS: sem JS, tudo nasce visivel. */
+.js .reveal{opacity:0;transform:translateY(22px)}
+.js .reveal.is-in{
+  opacity:1;transform:none;
+  transition:opacity .9s var(--ease) var(--d,0s),transform .9s var(--ease) var(--d,0s);
+}
+.reveal-img{overflow:hidden}
+.js .reveal-img img{transform:scale(1.12);transition:transform 1.6s var(--ease)}
+.js .reveal-img.is-in img{transform:scale(1)}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0ms!important;transition-duration:.2s!important}
+  .js .reveal{opacity:0;transform:none}
+  .js .reveal.is-in{opacity:1;transition:opacity .2s linear}
+  .js .reveal-img img,.js .reveal-img.is-in img{transform:none}
+  .btn:hover{transform:none}
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width:1040px){
+  .nav__links{
+    position:absolute;left:0;right:0;top:100%;bottom:auto;
+    display:grid;gap:0;align-items:stretch;
+    background:var(--white);border-bottom:1px solid var(--line);
+    padding:8px var(--pad-x) 24px;
+    max-height:calc(100svh - 64px);overflow-y:auto;
+    transform:translateY(-12px);opacity:0;visibility:hidden;
+    transition:transform .35s var(--ease),opacity .3s var(--ease),visibility .3s;
+  }
+  .nav__links.is-open{transform:none;opacity:1;visibility:visible}
+  .nav__links a,.header.is-solid .nav__links a{color:var(--navy)}
+  .nav__links a{padding:16px 0;border-bottom:1px solid var(--line);font-size:15.5px}
+  .nav__links a::after{display:none}
+  .nav__cta{display:none}
+  .burger{display:grid}
+}
+
+/* Telas baixas (notebooks 768/800px de altura): aperta o hero para caber */
+@media (min-width:761px) and (max-height:820px){
+  .hero .t-h1{font-size:clamp(30px,3.4vw,46px)}
+  .hero__title-group{gap:12px}
+  .hero__sub{font-size:16px;line-height:1.7}
+  .hero__trust{font-size:12.5px;gap:8px 20px}
+}
+@media (max-width:760px){
+  /* Empilhado: o hero volta a ter altura natural e o retrato vira quadrado */
+  .hero{min-height:0}
+  .hero__media{min-height:0;aspect-ratio:1/1;max-height:58vh}
+  .hero__media img{height:100%}
+}
+@media (max-width:560px){
+  :root{--header-h:70px}
+  .brand img{height:32px}
+  .brand span{font-size:9px;letter-spacing:.14em}
+  .hero__ctas .btn{width:100%}
+  .hero__ctas{gap:10px}
+  .float-wa em{display:none}
+  .float-wa{padding:16px;min-width:56px;justify-content:center}
+}
+
+@media print{
+  .header,.float-wa,.hero__ctas,.form{display:none}
+  body{background:#fff}
+}
+</style>
+</head>
+<body>
+<script>document.documentElement.className += " js";</script>
+
+<a class="skip" href="#conteudo">Ir para o conteúdo</a>
+
+<!-- ============================ CABEÇALHO ============================ -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a class="brand" href="#topo" aria-label="Dr. Alberto Fagali — início">
+      <span class="brand__logo">
+        <img class="logo--light" src="assets/logo-horizontal-white.svg" alt="Dr. Alberto Fagali"
+             width="506" height="64" />
+        <img class="logo--dark" src="assets/logo-horizontal-navy.svg" alt="" aria-hidden="true"
+             width="506" height="64" />
+      </span>
+    </a>
+
+    <nav class="nav" aria-label="Navegação principal">
+      <div class="nav__links" id="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#areas">Áreas de atuação</a>
+        <a href="#bariatrica">Bariátrica</a>
+        <a href="#refluxo">Refluxo e hérnia de hiato</a>
+        <a href="#contato">Contato</a>
+      </div>
+      <a class="btn btn--navy btn--sm nav__cta"
+         href="https://wa.me/5512991493558?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta."
+         target="_blank" rel="noopener" data-cta="header">Agende sua consulta</a>
+      <button class="burger" id="burger" type="button"
+              aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ============================ HERO ============================ -->
+  <section class="hero" id="topo" aria-labelledby="hero-titulo">
+    <div class="hero__text">
+      <div class="hero__title-group">
+        <h1 class="display t-h1 hero__title" id="hero-titulo">Dr. Alberto Fagali</h1>
+        <div class="hero__line" aria-hidden="true"></div>
+        <p class="hero__role">Cirurgião do Aparelho Digestivo | Cirurgia Bariátrica e Metabólica</p>
+        <p class="hero__crm">CRM-SP 135.929 | RQE 564531</p>
+      </div>
+
+      <p class="hero__sub">
+        Cirurgia do aparelho digestivo e cirurgia bariátrica e metabólica, com indicação
+        individualizada, técnicas minimamente invasivas e acompanhamento próximo em todas
+        as etapas do tratamento.
+      </p>
+
+      <div class="hero__ctas">
+        <a class="btn btn--gold"
+           href="https://wa.me/5512991493558?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20com%20o%20Dr.%20Alberto%20Fagali."
+           target="_blank" rel="noopener" data-cta="hero-primario">Agende sua consulta</a>
+        <a class="btn btn--ghost-light" href="#areas" data-cta="hero-secundario">Conheça as áreas de atuação</a>
+      </div>
+
+      <ul class="hero__trust">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 4 22 9l-10 5L2 9l10-5Z"/><path d="M6 11.5V16c0 1.7 2.7 3 6 3s6-1.3 6-3v-4.5"/></svg>
+          Especialização pela UNIFESP
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="8" width="16" height="11"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg>
+          Cirurgia robótica — Instituto D'Or
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 20h18M5 20V10l7-5 7 5v10M10 20v-5h4v5"/></svg>
+          Membro titular CBCD e SBCBM
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero__media">
+      <img src="assets/web/retrato-escuro-1400.webp"
+           srcset="assets/web/retrato-escuro-800.webp 800w,
+                   assets/web/retrato-escuro-1400.webp 1400w"
+           sizes="(max-width:760px) 100vw, 50vw"
+           alt="Retrato do Dr. Alberto Fagali"
+           width="1400" height="2099" fetchpriority="high" decoding="async" />
+    </div>
+  </section>
+
+  <!-- ============================ PILARES ============================ -->
+  <section aria-label="Pilares do atendimento">
+    <div class="grid-rules cols-3">
+      <article class="pillar reveal">
+        <span class="pillar__num">01</span>
+        <h2 class="display t-h3">Experiência em cirurgia digestiva e bariátrica</h2>
+        <p class="body">Experiência profissional dedicada ao tratamento cirúrgico das doenças do
+          aparelho digestivo e à cirurgia bariátrica e metabólica, acompanhando o paciente desde
+          a avaliação até o pós-operatório.</p>
+      </article>
+      <article class="pillar reveal" style="--d:.1s">
+        <span class="pillar__num">02</span>
+        <h2 class="display t-h3">Cirurgia minimamente invasiva e robótica</h2>
+        <p class="body">Utilização de técnicas videolaparoscópicas e robóticas quando indicadas,
+          buscando menor agressão cirúrgica, recuperação adequada e segurança em cada procedimento.</p>
+      </article>
+      <article class="pillar reveal" style="--d:.2s">
+        <span class="pillar__num">03</span>
+        <h2 class="display t-h3">Indicação individualizada e acompanhamento próximo</h2>
+        <p class="body">Cada paciente é avaliado de forma individual. A escolha do tratamento
+          considera sua história clínica, exames, características anatômicas, expectativas e
+          necessidades, com acompanhamento próximo antes e depois da cirurgia.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================ SOBRE ============================ -->
+  <section class="section" id="sobre" aria-labelledby="sobre-titulo"
+           style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,64px);align-items:start">
+    <div class="reveal reveal-img" style="background:var(--navy)">
+      <img src="assets/web/jaleco-1400.webp"
+           srcset="assets/web/jaleco-800.webp 800w,
+                   assets/web/jaleco-1400.webp 1400w"
+           sizes="(max-width:760px) 100vw, 45vw"
+           alt="Dr. Alberto Fagali de jaleco"
+           width="1400" height="2101" loading="lazy" decoding="async"
+           style="width:100%;aspect-ratio:4/5;object-fit:cover" />
+    </div>
+
+    <div class="reveal" style="--d:.1s;display:grid;gap:22px">
+      <span class="eyebrow">Sobre</span>
+      <h2 class="display t-h2" id="sobre-titulo">Sobre o Dr. Alberto Fagali</h2>
+      <p class="lead">Cirurgia do Aparelho Digestivo com atuação em Cirurgia Bariátrica e Metabólica</p>
+
+      <div style="display:grid;gap:16px;max-width:64ch">
+        <p class="body">O Dr. Alberto Fagali é Cirurgião do Aparelho Digestivo, com atuação em
+          cirurgia bariátrica e metabólica e cirurgia minimamente invasiva.</p>
+        <p class="body">Formado pela Universidade de Alfenas (UNIFENAS), com especialização em
+          Cirurgia do Aparelho Digestivo pela Universidade Federal de São Paulo
+          (UNIFESP – Escola Paulista de Medicina).</p>
+        <p class="body">É membro titular do Colégio Brasileiro de Cirurgia Digestiva (CBCD) e da
+          Sociedade Brasileira de Cirurgia Bariátrica e Metabólica (SBCBM).</p>
+        <p class="body">Dedica sua prática ao tratamento cirúrgico das doenças do aparelho
+          digestivo, com atuação em doenças do esôfago, estômago, intestino, vesícula e vias
+          biliares, hérnias e cirurgia bariátrica e metabólica.</p>
+        <p class="body">Também atua com técnicas minimamente invasivas, incluindo
+          videolaparoscopia e cirurgia robótica, sempre considerando a indicação adequada
+          para cada paciente.</p>
+      </div>
+
+      <ul class="grid-rules" style="grid-template-columns:1fr">
+        <li class="diff"><i aria-hidden="true"></i><span>Especialização em Cirurgia do Aparelho Digestivo pela UNIFESP – Escola Paulista de Medicina</span></li>
+        <li class="diff"><i aria-hidden="true"></i><span>Certificação em Cirurgia Robótica pelo Instituto D'Or (São Paulo)</span></li>
+        <li class="diff"><i aria-hidden="true"></i><span>Membro titular do CBCD e da SBCBM</span></li>
+        <li class="diff"><i aria-hidden="true"></i><span>Acompanhamento próximo — pré e pós-operatório com equipe multidisciplinar</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================ ÁREAS DE ATUAÇÃO ============================ -->
+  <section class="section stack on-navy" id="areas" aria-labelledby="areas-titulo">
+    <div class="head-block reveal">
+      <span class="eyebrow">Áreas de atuação</span>
+      <h2 class="display t-h2" id="areas-titulo">Três frentes de atuação cirúrgica</h2>
+    </div>
+
+    <div class="grid-rules grid-rules--navy cols-3">
+      <!-- 1 -->
+      <article class="area reveal">
+        <div style="display:grid;gap:14px">
+          <svg class="area__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M11 6V13A9 9 0 0 0 16 27A9 9 0 0 0 21 13V6"/><path d="M5 6H27"/></svg>
+          <h3 class="display t-h3">Cirurgia do Aparelho Digestivo</h3>
+        </div>
+        <div style="display:grid;gap:22px">
+          <div class="area__group">
+            <strong class="label">Esôfago e estômago</strong>
+            <ul>
+              <li>Doença do refluxo gastroesofágico</li>
+              <li>Hérnia de hiato</li>
+              <li>Acalasia</li>
+              <li>Outras doenças do esôfago com indicação cirúrgica</li>
+              <li>Doenças do estômago com indicação cirúrgica</li>
+            </ul>
+          </div>
+          <div class="area__group">
+            <strong class="label">Intestino delgado</strong>
+            <ul>
+              <li>Doenças do intestino delgado</li>
+              <li>Tratamento cirúrgico de doenças selecionadas do aparelho digestivo</li>
+            </ul>
+          </div>
+          <div class="area__group">
+            <strong class="label">Vesícula e vias biliares</strong>
+            <ul>
+              <li>Cálculos da vesícula biliar</li>
+              <li>Colecistite</li>
+              <li>Doenças das vias biliares</li>
+              <li>Outras doenças biliares com indicação cirúrgica</li>
+            </ul>
+          </div>
+          <div class="area__group">
+            <strong class="label">Hérnias da parede abdominal</strong>
+            <ul>
+              <li>Hérnia inguinal</li>
+              <li>Hérnia umbilical</li>
+              <li>Hérnia epigástrica</li>
+              <li>Hérnia incisional</li>
+              <li>Outras hérnias da parede abdominal</li>
+            </ul>
+          </div>
+          <div class="area__group">
+            <strong class="label">Cirurgia minimamente invasiva</strong>
+            <ul>
+              <li>Cirurgia por videolaparoscopia</li>
+              <li>Cirurgia robótica, quando indicada</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="area reveal" style="--d:.1s">
+        <div style="display:grid;gap:14px">
+          <svg class="area__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M16 4 28 16 16 28 4 16Z"/><path d="M10 16h12"/></svg>
+          <h3 class="display t-h3">Cirurgia Bariátrica e Metabólica</h3>
+        </div>
+        <div class="area__group">
+          <strong class="label">Tratamento cirúrgico da obesidade</strong>
+          <ul>
+            <li>Bypass gástrico</li>
+            <li>Sleeve gástrico (gastrectomia vertical)</li>
+            <li>Cirurgias revisionais</li>
+            <li>Cirurgia metabólica</li>
+            <li>Tratamento cirúrgico da obesidade e de suas doenças associadas</li>
+          </ul>
+        </div>
+        <a class="link-gold" href="#bariatrica">Ver a seção completa →</a>
+      </article>
+
+      <!-- 3 -->
+      <article class="area reveal" style="--d:.2s">
+        <div style="display:grid;gap:14px">
+          <svg class="area__icon" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 5v10a10 10 0 0 0 20 0V5"/><path d="M7 27h18"/></svg>
+          <h3 class="display t-h3">Coloproctologia</h3>
+        </div>
+        <div style="display:grid;gap:22px">
+          <div class="area__group">
+            <strong class="label">Cólon e reto</strong>
+            <ul>
+              <li>Doença diverticular e diverticulite</li>
+              <li>Doenças inflamatórias intestinais</li>
+              <li>Doenças do cólon e reto com indicação cirúrgica</li>
+              <li>Outras doenças colorretais com indicação cirúrgica</li>
+            </ul>
+          </div>
+          <div class="area__group">
+            <strong class="label">Doenças do ânus</strong>
+            <ul>
+              <li>Hemorroidas</li>
+              <li>Fissura anal</li>
+              <li>Fístula anal</li>
+              <li>Abscesso perianal</li>
+            </ul>
+          </div>
+          <div class="area__group">
+            <strong class="label">Outras condições</strong>
+            <ul>
+              <li>Cisto pilonidal</li>
+              <li>Outras doenças do ânus e região perianal</li>
+            </ul>
+          </div>
+          <div class="area__group">
+            <strong class="label">Cirurgia minimamente invasiva</strong>
+            <ul>
+              <li>Cirurgia colorretal por videolaparoscopia</li>
+              <li>Cirurgia robótica, quando indicada</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================ BARIÁTRICA ============================ -->
+  <section class="section on-white" id="bariatrica" aria-labelledby="bariatrica-titulo"
+           style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(28px,4vw,64px);align-items:start">
+    <div class="reveal" style="display:grid;gap:20px">
+      <span class="eyebrow">Bariátrica e metabólica</span>
+      <h2 class="display t-h2" id="bariatrica-titulo">Cirurgia Bariátrica e Metabólica</h2>
+      <div style="display:grid;gap:16px;max-width:60ch">
+        <p class="body">A cirurgia bariátrica e metabólica é uma das principais áreas de atuação
+          do Dr. Alberto Fagali.</p>
+        <p class="body">Mais do que a realização de uma cirurgia, o tratamento envolve avaliação
+          individualizada, definição da técnica mais adequada e acompanhamento em todas as etapas.</p>
+        <p class="body">A indicação considera as características clínicas e metabólicas de cada
+          paciente, seus exames, histórico de tratamentos, condições associadas à obesidade e
+          aspectos relacionados à cirurgia.</p>
+        <p class="pull">Não existe uma única técnica ideal para todos os pacientes. A escolha entre
+          as diferentes opções deve ser individualizada e discutida durante a avaliação médica.</p>
+      </div>
+      <a class="btn btn--navy" style="justify-self:start"
+         href="https://wa.me/5512991493558?text=Ol%C3%A1!%20Gostaria%20de%20saber%20se%20tenho%20indica%C3%A7%C3%A3o%20para%20a%20cirurgia%20bari%C3%A1trica."
+         target="_blank" rel="noopener" data-cta="bariatrica">Quero saber se posso fazer a bariátrica</a>
+    </div>
+
+    <div class="grid-rules reveal" style="--d:.1s;grid-template-columns:1fr">
+      <div class="tech">
+        <strong>Bypass gástrico</strong>
+        <span>Técnica que associa a redução do tamanho funcional do estômago à alteração do
+          trânsito intestinal, contribuindo para perda de peso e melhora de alterações
+          metabólicas relacionadas à obesidade.</span>
+      </div>
+      <div class="tech">
+        <strong>Sleeve gástrico — Gastrectomia Vertical</strong>
+        <span>Procedimento que reduz o volume do estômago, promovendo saciedade com menor
+          ingestão alimentar e podendo contribuir para a perda de peso e melhora de doenças
+          associadas à obesidade.</span>
+      </div>
+      <div class="tech">
+        <strong>Cirurgia revisional</strong>
+        <span>Indicada em situações específicas, como complicações, alterações anatômicas ou
+          resultados insatisfatórios após cirurgia bariátrica prévia. A avaliação deve considerar
+          individualmente a anatomia, a técnica realizada anteriormente e os objetivos do novo
+          tratamento.</span>
+      </div>
+      <div class="tech">
+        <strong>Cirurgia metabólica</strong>
+        <span>Procedimentos que podem contribuir para o tratamento de doenças metabólicas
+          associadas à obesidade, especialmente em pacientes criteriosamente selecionados.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ REFLUXO E HÉRNIA DE HIATO ============================ -->
+  <section id="refluxo" aria-labelledby="refluxo-titulo"
+           style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));background:var(--off)">
+    <div class="reveal-img" style="overflow:hidden;min-height:clamp(280px,36vw,520px);background:var(--navy)">
+      <img src="assets/web/retrato-oculos-1400.webp"
+           srcset="assets/web/retrato-oculos-800.webp 800w,
+                   assets/web/retrato-oculos-1400.webp 1400w"
+           sizes="(max-width:760px) 100vw, 50vw"
+           alt="Dr. Alberto Fagali em consultório"
+           width="1400" height="2099" loading="lazy" decoding="async"
+           style="width:100%;height:100%;object-fit:cover" />
+    </div>
+    <div class="reveal" style="padding:clamp(40px,6vw,96px) var(--pad-x);display:grid;gap:20px;align-content:center">
+      <span class="eyebrow">Página estratégica</span>
+      <h2 class="display t-h2" id="refluxo-titulo">Cirurgia do Refluxo e Hérnia de Hiato</h2>
+      <div style="display:grid;gap:16px;max-width:58ch">
+        <p class="body">O refluxo gastroesofágico e a hérnia de hiato podem apresentar diferentes
+          causas, características e graus de gravidade.</p>
+        <p class="body">Quando o tratamento clínico não é suficiente ou existem condições
+          específicas que favorecem a indicação cirúrgica, o paciente deve ser submetido a uma
+          avaliação individualizada.</p>
+        <p class="body">A cirurgia pode ser realizada por técnicas minimamente invasivas, de
+          acordo com as características de cada caso.</p>
+        <p class="body">A avaliação pré-operatória é fundamental para definir a indicação e a
+          técnica mais adequada.</p>
+      </div>
+      <a class="btn btn--ghost" style="justify-self:start"
+         href="https://wa.me/5512991493558?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20refluxo%20ou%20h%C3%A9rnia%20de%20hiato."
+         target="_blank" rel="noopener" data-cta="refluxo">Agende sua avaliação</a>
+    </div>
+  </section>
+
+  <!-- ============================ DEPOIMENTOS E CONVÊNIOS ============================ -->
+  <section class="section stack on-white" aria-labelledby="depoimentos-titulo"
+           style="border-top:1px solid var(--line)">
+    <div class="head-block reveal">
+      <span class="eyebrow">Depoimentos</span>
+      <h2 class="display t-h2" id="depoimentos-titulo">O que os pacientes registram no Google</h2>
+      <p class="body">Depoimentos espontâneos, publicados diretamente na ficha do Google do
+        consultório.</p>
+    </div>
+
+    <!--
+      DEPOIMENTOS — ponto de integração.
+      No WordPress, substituir os três blocos abaixo pelo shortcode do plugin que
+      importa as avaliações da ficha do Google (ex.: [google-reviews]).
+      Manter a preferência do briefing: depoimentos espontâneos, sóbrios e reais,
+      sem destacar frases de superioridade ou promessa de resultado.
+    -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:clamp(14px,1.8vw,24px)">
+      <blockquote class="quote reveal">
+        <p>Espaço reservado para o depoimento importado da ficha do Google.</p>
+        <cite>Paciente · Google Reviews</cite>
+      </blockquote>
+      <blockquote class="quote reveal" style="--d:.08s">
+        <p>Espaço reservado para o depoimento importado da ficha do Google.</p>
+        <cite>Paciente · Google Reviews</cite>
+      </blockquote>
+      <blockquote class="quote reveal" style="--d:.16s">
+        <p>Espaço reservado para o depoimento importado da ficha do Google.</p>
+        <cite>Paciente · Google Reviews</cite>
+      </blockquote>
+    </div>
+
+    <div class="reveal" style="display:grid;gap:16px;border-top:1px solid var(--line);padding-top:clamp(24px,3vw,40px)">
+      <span class="eyebrow">Convênios atendidos</span>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <span class="tag">Bradesco Saúde</span>
+        <span class="tag">SulAmérica</span>
+        <span class="tag">Mediservice</span>
+      </div>
+      <p class="body" style="font-size:13.5px">Consulte a secretaria para confirmar a cobertura do
+        seu plano e os procedimentos autorizados.</p>
+    </div>
+  </section>
+
+  <!-- ============================ LOCALIZAÇÃO E CONTATO ============================ -->
+  <section class="section stack on-navy" id="contato" aria-labelledby="contato-titulo">
+    <div class="head-block reveal">
+      <span class="eyebrow">Localização e contato</span>
+      <h2 class="display t-h2" id="contato-titulo">Duas unidades no Vale do Paraíba</h2>
+    </div>
+
+    <div class="grid-rules grid-rules--navy" style="grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))">
+      <div class="unit reveal">
+        <strong class="label">São José dos Campos</strong>
+        <span class="name">Gastrovale São José dos Campos</span>
+        <address>Av. Nove de Julho, 685, Sala 51 – Jardim Apolo<br />
+          Edifício São José Prime – São José dos Campos – SP</address>
+        <div class="unit__links">
+          <a class="link-gold" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&amp;query=Av.+Nove+de+Julho%2C+685+-+Jardim+Apolo%2C+S%C3%A3o+Jos%C3%A9+dos+Campos+-+SP">Ver no mapa →</a>
+        </div>
+      </div>
+
+      <div class="unit reveal" style="--d:.08s">
+        <strong class="label">Taubaté</strong>
+        <span class="name">Gastrovale Taubaté</span>
+        <address>Avenida Itália, 928, Sala 1702 – The One Office Tower<br />
+          Jardim das Nações – Taubaté – SP</address>
+        <div class="unit__links">
+          <a class="link-gold" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&amp;query=Avenida+It%C3%A1lia%2C+928+-+Jardim+das+Na%C3%A7%C3%B5es%2C+Taubat%C3%A9+-+SP">Ver no mapa →</a>
+        </div>
+      </div>
+
+      <div class="unit reveal" style="--d:.16s;gap:18px">
+        <strong class="label">Contato</strong>
+        <div style="display:grid;gap:8px;font-size:14.5px;line-height:1.7;color:var(--on-navy)">
+          <a href="https://wa.me/5512991493558" target="_blank" rel="noopener" data-cta="contato-numero">WhatsApp: (12) 99149-3558</a>
+          <a href="mailto:dralbertofagali@gmail.com">dralbertofagali@gmail.com</a>
+          <span>Secretaria: segunda a sexta, das 9h às 18h</span>
+        </div>
+        <a class="btn btn--gold btn--sm" style="justify-self:start"
+           href="https://wa.me/5512991493558?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta."
+           target="_blank" rel="noopener" data-cta="contato-bloco">Falar no WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Formulário: monta a mensagem e abre a conversa no WhatsApp da secretaria -->
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(20px,2.6vw,36px);align-items:start">
+      <div style="display:grid;gap:16px;align-content:start">
+        <span class="eyebrow">Solicitar contato</span>
+        <h3 class="display t-h3">Prefere que a secretaria retorne?</h3>
+        <p class="body">Preencha os dados ao lado. A mensagem é aberta no WhatsApp já preenchida,
+          e o retorno acontece no horário de funcionamento da secretaria.</p>
+        <p class="body" style="font-size:13.5px">Em caso de urgência, procure atendimento
+          presencial em pronto-socorro.</p>
+      </div>
+
+      <form class="form" id="form-contato" novalidate>
+        <label>Nome completo
+          <input type="text" name="nome" id="f-nome" required autocomplete="name"
+                 placeholder="Como podemos chamar você" />
+        </label>
+        <label>WhatsApp
+          <input type="tel" name="telefone" id="f-tel" required autocomplete="tel"
+                 inputmode="tel" placeholder="(12) 90000-0000" />
+        </label>
+        <label>Unidade de preferência
+          <select name="unidade" id="f-unidade">
+            <option value="São José dos Campos">São José dos Campos</option>
+            <option value="Taubaté">Taubaté</option>
+            <option value="Ainda não sei">Ainda não sei</option>
+          </select>
+        </label>
+        <label>Motivo da consulta
+          <textarea name="motivo" id="f-motivo" rows="3" placeholder="Descreva brevemente"></textarea>
+        </label>
+        <button class="btn btn--gold" type="submit" data-cta="formulario">Enviar pelo WhatsApp</button>
+        <p class="form__note" id="form-msg" role="status" aria-live="polite">
+          Retorno da secretaria de segunda a sexta, das 9h às 18h. Seus dados são usados apenas
+          para o contato solicitado.
+        </p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ============================ RODAPÉ ============================ -->
+<footer class="on-navy" style="background:var(--navy-deep);color:var(--on-navy);padding:clamp(40px,5vw,72px) var(--pad-x);display:grid;gap:clamp(24px,3vw,40px)">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:clamp(24px,3vw,48px);align-items:start">
+    <div style="display:grid;gap:12px;justify-items:start">
+      <img src="assets/logo-vertical-white.svg" alt="Dr. Alberto Fagali"
+           width="415" height="157" loading="lazy" style="width:180px;height:auto" />
+      <span style="font-size:10.5px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)">Cirurgia do Aparelho Digestivo</span>
+    </div>
+
+    <nav style="display:grid;gap:10px;font-size:14px;line-height:1.7" aria-label="Navegação do rodapé">
+      <strong class="label">Navegação</strong>
+      <a href="#sobre">Sobre</a>
+      <a href="#areas">Áreas de atuação</a>
+      <a href="#bariatrica">Bariátrica e metabólica</a>
+      <a href="#refluxo">Refluxo e hérnia de hiato</a>
+      <a href="#contato">Localização e contato</a>
+    </nav>
+
+    <div style="display:grid;gap:10px;font-size:14px;line-height:1.7">
+      <strong class="label">Contato</strong>
+      <a href="https://wa.me/5512991493558" target="_blank" rel="noopener">WhatsApp: (12) 99149-3558</a>
+      <a href="mailto:dralbertofagali@gmail.com">dralbertofagali@gmail.com</a>
+      <span>Segunda a sexta, 9h às 18h</span>
+    </div>
+
+    <div style="display:grid;gap:10px;font-size:14px;line-height:1.7">
+      <strong class="label">Institucional</strong>
+      <a href="politica-de-privacidade.html">Política de Privacidade</a>
+      <a href="termos-de-uso.html">Termos de Uso</a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+
+  <div style="border-top:1px solid #16283A;padding-top:24px;display:grid;gap:10px;font-size:13px;line-height:1.75">
+    <span style="color:var(--off)">Dr. Alberto João Berra Fagali — CRM SP 135.929 | RQE 564531</span>
+    <span style="max-width:82ch">Este site tem caráter informativo e não substitui consulta médica.
+      Resultados podem variar de paciente para paciente.</span>
+  </div>
+</footer>
+
+<!-- WhatsApp flutuante -->
+<a class="float-wa" id="floatWa"
+   href="https://wa.me/5512991493558?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta."
+   target="_blank" rel="noopener" data-cta="flutuante" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.83 2.41a8.18 8.18 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.18-.54.06-.25-.13-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.86.84-.86 2.05s.88 2.38 1 2.54c.12.17 1.73 2.64 4.19 3.7.58.25 1.04.4 1.4.52.59.19 1.12.16 1.55.1.47-.07 1.47-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+  <em>Agende no WhatsApp</em>
+</a>
+
+<!-- ============================ DADOS ESTRUTURADOS (SEO) ============================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Physician",
+      "@id": "https://www.dralbertofagali.com.br/#medico",
+      "name": "Dr. Alberto João Berra Fagali",
+      "alternateName": "Dr. Alberto Fagali",
+      "description": "Cirurgião do Aparelho Digestivo com atuação em cirurgia bariátrica e metabólica, coloproctologia e cirurgia minimamente invasiva.",
+      "medicalSpecialty": ["Gastroenterologic", "Surgical"],
+      "email": "dralbertofagali@gmail.com",
+      "telephone": "+55-12-99149-3558",
+      "url": "https://www.dralbertofagali.com.br/",
+      "image": "https://www.dralbertofagali.com.br/assets/retrato-escuro.webp",
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "Universidade de Alfenas (UNIFENAS)" },
+        { "@type": "CollegeOrUniversity", "name": "Universidade Federal de São Paulo — Escola Paulista de Medicina (UNIFESP)" }
+      ],
+      "memberOf": [
+        { "@type": "Organization", "name": "Colégio Brasileiro de Cirurgia Digestiva (CBCD)" },
+        { "@type": "Organization", "name": "Sociedade Brasileira de Cirurgia Bariátrica e Metabólica (SBCBM)" }
+      ],
+      "areaServed": [
+        { "@type": "City", "name": "São José dos Campos" },
+        { "@type": "City", "name": "Taubaté" }
+      ],
+      "availableService": [
+        { "@type": "MedicalProcedure", "name": "Cirurgia bariátrica e metabólica" },
+        { "@type": "MedicalProcedure", "name": "Cirurgia do refluxo e hérnia de hiato" },
+        { "@type": "MedicalProcedure", "name": "Cirurgia de hérnias da parede abdominal" },
+        { "@type": "MedicalProcedure", "name": "Cirurgia da vesícula e vias biliares" },
+        { "@type": "MedicalProcedure", "name": "Cirurgia colorretal e proctológica" }
+      ],
+      "location": [
+        { "@id": "https://www.dralbertofagali.com.br/#gastrovale-sjc" },
+        { "@id": "https://www.dralbertofagali.com.br/#gastrovale-taubate" }
+      ]
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://www.dralbertofagali.com.br/#gastrovale-sjc",
+      "name": "Gastrovale São José dos Campos",
+      "telephone": "+55-12-99149-3558",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Nove de Julho, 685, Sala 51 — Edifício São José Prime",
+        "addressLocality": "São José dos Campos",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    },
+    {
+      "@type": "MedicalClinic",
+      "@id": "https://www.dralbertofagali.com.br/#gastrovale-taubate",
+      "name": "Gastrovale Taubaté",
+      "telephone": "+55-12-99149-3558",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Avenida Itália, 928, Sala 1702 — The One Office Tower, Jardim das Nações",
+        "addressLocality": "Taubaté",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+(function () {
+  "use strict";
+  var WHATSAPP = "5512991493558";
+
+  /* ---------- Cabeçalho reativo ao scroll ----------
+     Transparente sobre o hero, solido depois; recolhe ao descer e
+     reaparece ao subir; barra dourada indica o progresso de leitura. */
+  var header = document.getElementById("header");
+  var heroEl = document.getElementById("topo");
+  var menuAberto = false;
+  var ultimoY = window.scrollY;
+  var agendado = false;
+
+  function limiteSolido() {
+    /* vira solido pouco antes do hero terminar */
+    return heroEl ? Math.max(60, heroEl.offsetHeight - 120) : 60;
+  }
+
+  function aoRolar() {
+    var y = window.scrollY;
+    var rolavel = document.documentElement.scrollHeight - window.innerHeight;
+    header.style.setProperty("--progress", rolavel > 0 ? (y / rolavel).toFixed(4) : 0);
+
+    var solido = y > limiteSolido();
+    header.classList.toggle("is-solid", solido || menuAberto);
+
+    /* so recolhe bem depois do hero, e nunca com o menu aberto */
+    if (!menuAberto && solido && y > ultimoY + 6 && y > limiteSolido() + 260) {
+      header.classList.add("is-hidden");
+    } else if (y < ultimoY - 6 || y <= limiteSolido()) {
+      header.classList.remove("is-hidden");
+    }
+    ultimoY = y;
+    agendado = false;
+  }
+
+  aoRolar();
+  window.addEventListener("scroll", function () {
+    if (agendado) return;
+    agendado = true;
+    window.requestAnimationFrame(aoRolar);
+  }, { passive: true });
+  window.addEventListener("resize", aoRolar, { passive: true });
+
+  /* ---------- Menu mobile ---------- */
+  var burger = document.getElementById("burger");
+  var menu = document.getElementById("menu");
+  var setMenu = function (open) {
+    menuAberto = open;
+    menu.classList.toggle("is-open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+    /* com o menu aberto o cabecalho fica sempre solido e visivel */
+    if (open) {
+      header.classList.add("is-solid");
+      header.classList.remove("is-hidden");
+    } else {
+      aoRolar();
+    }
+  };
+  burger.addEventListener("click", function () {
+    setMenu(burger.getAttribute("aria-expanded") !== "true");
+  });
+  menu.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") setMenu(false);
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") setMenu(false);
+  });
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 1040) setMenu(false);
+  });
+
+  /* ---------- Entradas ao entrar na viewport ---------- */
+  var revealables = document.querySelectorAll(".reveal, .reveal-img");
+  if ("IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-in");
+        io.unobserve(entry.target);
+      });
+    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.08 });
+    revealables.forEach(function (el) { io.observe(el); });
+  } else {
+    revealables.forEach(function (el) { el.classList.add("is-in"); });
+  }
+
+  /* ---------- Seção ativa no menu ---------- */
+  var sections = ["sobre", "areas", "bariatrica", "refluxo", "contato"]
+    .map(function (id) { return document.getElementById(id); })
+    .filter(Boolean);
+  var links = {};
+  menu.querySelectorAll("a").forEach(function (a) {
+    links[a.getAttribute("href").slice(1)] = a;
+  });
+  if ("IntersectionObserver" in window && sections.length) {
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = links[entry.target.id];
+        if (!link) return;
+        if (entry.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].removeAttribute("aria-current"); });
+          link.setAttribute("aria-current", "true");
+        }
+      });
+    }, { rootMargin: "-45% 0px -50% 0px" });
+    sections.forEach(function (s) { spy.observe(s); });
+  }
+
+  /* ---------- Botão flutuante: aparece depois do hero ---------- */
+  var floatWa = document.getElementById("floatWa");
+  var hero = document.getElementById("topo");
+  if ("IntersectionObserver" in window && hero) {
+    new IntersectionObserver(function (entries) {
+      floatWa.classList.toggle("is-visible", !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(hero);
+  } else {
+    floatWa.classList.add("is-visible");
+  }
+
+  /* ---------- Formulário: abre o WhatsApp com a mensagem pronta ---------- */
+  var form = document.getElementById("form-contato");
+  var msg = document.getElementById("form-msg");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var nome = document.getElementById("f-nome").value.trim();
+    var tel = document.getElementById("f-tel").value.trim();
+    var unidade = document.getElementById("f-unidade").value;
+    var motivo = document.getElementById("f-motivo").value.trim();
+
+    if (!nome || !tel) {
+      msg.textContent = "Por favor, preencha nome e WhatsApp para continuarmos.";
+      (nome ? document.getElementById("f-tel") : document.getElementById("f-nome")).focus();
+      return;
+    }
+
+    var texto =
+      "Olá! Gostaria de agendar uma consulta." +
+      "\nNome: " + nome +
+      "\nWhatsApp: " + tel +
+      "\nUnidade: " + unidade +
+      (motivo ? "\nMotivo: " + motivo : "");
+
+    msg.textContent = "Abrindo o WhatsApp com sua mensagem...";
+    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto), "_blank", "noopener");
+  });
+})();
+</script>
+
+</body>
+</html>

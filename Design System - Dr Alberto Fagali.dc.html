@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F5F2; }
+  * { box-sizing: border-box; }
+  img { display: block; max-width: 100%; }
+  a { color: #8E5330; text-decoration: none; }
+  a:hover { color: #0F1417; }
+  ::selection { background: #A8663C; color: #fff; }
+  @keyframes af-rise { from { opacity: 0; transform: translateY(42px); } to { opacity: 1; transform: none; } }
+  @keyframes af-fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes af-left { from { opacity: 0; transform: translateX(-48px); } to { opacity: 1; transform: none; } }
+  @keyframes af-right { from { opacity: 0; transform: translateX(48px); } to { opacity: 1; transform: none; } }
+  @keyframes af-scale { from { opacity: 0; transform: scale(.93); } to { opacity: 1; transform: none; } }
+  @keyframes af-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes af-mask { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+  @keyframes af-blur { from { opacity: 0; filter: blur(16px); transform: translateY(28px); } to { opacity: 1; filter: blur(0); transform: none; } }
+  @keyframes af-zoom { from { transform: scale(1.14); } to { transform: scale(1); } }
+</style>
+</helmet>
+
+<div style="font-family: Archivo, system-ui, sans-serif; color: #2A363B; background: #F7F5F2; overflow-x: hidden;">
+
+  <!-- ============ CAPA ============ -->
+  <section data-screen-label="Capa" style="background: #0F1417; color: #F7F5F2; padding: clamp(40px,6vw,72px) clamp(20px,5vw,72px); min-height: min(88vh, 900px); display: grid; grid-template-rows: auto 1fr auto; gap: clamp(32px,5vw,64px); position: relative; overflow: hidden;">
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; color: #8C9AA1; animation: af-fade 1s ease-out .1s both;">
+      <span>Identidade visual e sistema de design</span>
+      <span>Versão 1.0 — Setembro 2026</span>
+    </div>
+
+    <div style="display: grid; align-content: center; gap: clamp(20px,3vw,34px); max-width: 1100px;">
+      <svg viewBox="0 0 420 96" style="width: clamp(240px,34vw,420px); height: auto; color: #F7F5F2; animation: af-blur 1.2s cubic-bezier(.2,.7,.2,1) .2s both;" role="img" aria-label="Dr. Alberto Fagali">
+        <circle cx="46" cy="48" r="43" fill="none" stroke="currentColor" stroke-width="1.2" opacity=".85"></circle>
+        <text x="46" y="49" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="33" font-weight="400" letter-spacing="1.5" fill="currentColor">AF</text>
+        <text x="112" y="42" font-family="Spectral, serif" font-size="30" font-weight="400" fill="currentColor">Dr. Alberto Fagali</text>
+        <line x1="112" y1="57" x2="404" y2="57" stroke="#C6906B" stroke-width="1"></line>
+        <text x="112" y="79" font-family="Archivo, sans-serif" font-size="11" letter-spacing="2.9" fill="#A9B4BA">CIRURGIA DO APARELHO DIGESTIVO</text>
+      </svg>
+      <h1 style="font-family: Spectral, serif; font-weight: 300; font-size: clamp(34px,6.4vw,84px); line-height: 1.04; letter-spacing: -.02em; margin: 0; max-width: 20ch; text-wrap: pretty; animation: af-rise 1.1s cubic-bezier(.2,.7,.2,1) .45s both;">Autoridade clínica, dita com sobriedade.</h1>
+      <p style="font-size: clamp(15px,1.3vw,18px); line-height: 1.7; color: #A9B4BA; max-width: 58ch; margin: 0; animation: af-rise 1.1s cubic-bezier(.2,.7,.2,1) .6s both;">Sistema visual construído sobre o manual da marca e o briefing de site: marca, cores, tipografia, ícones, componentes, padrões de movimento e a home montada.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px,1fr)); gap: 1px; background: #26313620; border-top: 1px solid #26313A; animation: af-fade 1s ease-out .9s both;">
+      <div style="padding: 20px 0 4px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #8C9AA1;">01 Marca</div>
+      <div style="padding: 20px 0 4px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #8C9AA1;">02 Cor</div>
+      <div style="padding: 20px 0 4px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #8C9AA1;">03 Tipografia</div>
+      <div style="padding: 20px 0 4px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #8C9AA1;">04 Ícones e foto</div>
+      <div style="padding: 20px 0 4px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #8C9AA1;">05 Componentes</div>
+      <div style="padding: 20px 0 4px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #8C9AA1;">06 Movimento</div>
+      <div style="padding: 20px 0 4px; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #C6906B;">07 Home</div>
+    </div>
+  </section>
+
+  <!-- ============ 01 MARCA ============ -->
+  <section data-screen-label="01 Marca" style="padding: clamp(56px,8vw,120px) clamp(20px,5vw,72px); border-bottom: 1px solid #E2DCD3;">
+    <div style="display: grid; gap: 10px; margin-bottom: clamp(32px,5vw,64px); animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 26%;">
+      <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">01 — Marca</span>
+      <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,4.2vw,52px); line-height: 1.1; margin: 0; letter-spacing: -.015em;">O nome é a marca</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: #5C6A70; max-width: 62ch; margin: 0; text-wrap: pretty;">“Dr. Alberto Fagali” é o elemento principal. O monograma AF é apoio — usado quando o espaço não permite o nome completo. CRM e RQE nunca entram no logotipo.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,300px),1fr)); gap: clamp(16px,2vw,28px);">
+      <div style="background: #fff; border: 1px solid #E2DCD3; padding: clamp(24px,3vw,40px); display: grid; gap: 28px; align-content: space-between; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+        <svg viewBox="0 0 420 96" style="width: 100%; height: auto; color: #0F1417;" role="img" aria-label="Logotipo horizontal">
+          <circle cx="46" cy="48" r="43" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+          <text x="46" y="49" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="33" letter-spacing="1.5" fill="currentColor">AF</text>
+          <text x="112" y="42" font-family="Spectral, serif" font-size="30" fill="currentColor">Dr. Alberto Fagali</text>
+          <line x1="112" y1="57" x2="404" y2="57" stroke="#A8663C" stroke-width="1"></line>
+          <text x="112" y="79" font-family="Archivo, sans-serif" font-size="11" letter-spacing="2.9" fill="#5C6A70">CIRURGIA DO APARELHO DIGESTIVO</text>
+        </svg>
+        <div style="display: grid; gap: 4px; border-top: 1px solid #EDE9E3; padding-top: 16px;">
+          <strong style="font-size: 13px; font-weight: 600; letter-spacing: .04em;">Versão principal — horizontal</strong>
+          <span style="font-size: 13px; color: #5C6A70; line-height: 1.6;">Cabeçalho do site, assinatura de documentos, e-mail.</span>
+        </div>
+      </div>
+
+      <div style="background: #0F1417; border: 1px solid #0F1417; padding: clamp(24px,3vw,40px); display: grid; gap: 28px; align-content: space-between; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .08s both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+          <svg viewBox="0 0 320 210" style="width: min(100%,240px); height: auto; margin: 0 auto; color: #F7F5F2;" role="img" aria-label="Logotipo vertical em fundo escuro">
+            <circle cx="160" cy="52" r="42" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+            <text x="160" y="53" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="32" letter-spacing="1.5" fill="currentColor">AF</text>
+            <text x="160" y="148" text-anchor="middle" font-family="Spectral, serif" font-size="29" fill="currentColor">Dr. Alberto Fagali</text>
+            <line x1="52" y1="164" x2="268" y2="164" stroke="#C6906B" stroke-width="1"></line>
+            <text x="160" y="186" text-anchor="middle" font-family="Archivo, sans-serif" font-size="10.5" letter-spacing="2.6" fill="#A9B4BA">CIRURGIA DO APARELHO DIGESTIVO</text>
+          </svg>
+        <div style="display: grid; gap: 4px; border-top: 1px solid #26313A; padding-top: 16px;">
+          <strong style="font-size: 13px; font-weight: 600; color: #F7F5F2; letter-spacing: .04em;">Vertical — fundo escuro</strong>
+          <span style="font-size: 13px; color: #A9B4BA; line-height: 1.6;">Rodapé, capas, redes sociais, papelaria.</span>
+        </div>
+      </div>
+
+      <div style="background: #EDE9E3; border: 1px solid #E2DCD3; padding: clamp(24px,3vw,40px); display: grid; gap: 28px; align-content: space-between; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .16s both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+        <div style="display: flex; gap: clamp(16px,3vw,32px); align-items: center; justify-content: center; flex-wrap: wrap;">
+          <svg viewBox="0 0 96 96" style="width: 84px; height: 84px; color: #0F1417;" role="img" aria-label="Monograma AF">
+            <circle cx="48" cy="48" r="45" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+            <text x="48" y="49" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="34" letter-spacing="1.5" fill="currentColor">AF</text>
+          </svg>
+          <svg viewBox="0 0 96 96" style="width: 84px; height: 84px;" role="img" aria-label="Monograma AF sólido">
+            <circle cx="48" cy="48" r="47" fill="#A8663C"></circle>
+            <text x="48" y="49" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="34" letter-spacing="1.5" fill="#F7F5F2">AF</text>
+          </svg>
+          <svg viewBox="0 0 96 96" style="width: 84px; height: 84px;" role="img" aria-label="Monograma AF em fundo escuro">
+            <rect x="0" y="0" width="96" height="96" fill="#0F1417"></rect>
+            <text x="48" y="49" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="34" letter-spacing="1.5" fill="#F7F5F2">AF</text>
+          </svg>
+        </div>
+        <div style="display: grid; gap: 4px; border-top: 1px solid #DCD6CE; padding-top: 16px;">
+          <strong style="font-size: 13px; font-weight: 600; letter-spacing: .04em;">Monograma</strong>
+          <span style="font-size: 13px; color: #5C6A70; line-height: 1.6;">Favicon, avatar, selo. Mínimo 24 px de altura.</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,260px),1fr)); gap: clamp(16px,2vw,28px); margin-top: clamp(16px,2vw,28px);">
+      <div style="background: #fff; border: 1px solid #E2DCD3; padding: clamp(20px,2.4vw,32px); animation: af-scale .8s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Área de respiro</strong>
+        <div style="margin: 20px 0; padding: 22px; border: 1px dashed #C9C1B6; display: grid; place-items: center;">
+          <div style="outline: 1px solid #E2DCD3; padding: 6px;">
+            <svg viewBox="0 0 420 96" style="width: min(100%,220px); height: auto; color: #0F1417;">
+              <circle cx="46" cy="48" r="43" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+              <text x="46" y="49" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="33" letter-spacing="1.5" fill="currentColor">AF</text>
+              <text x="112" y="42" font-family="Spectral, serif" font-size="30" fill="currentColor">Dr. Alberto Fagali</text>
+              <line x1="112" y1="57" x2="404" y2="57" stroke="#A8663C" stroke-width="1"></line>
+              <text x="112" y="79" font-family="Archivo, sans-serif" font-size="11" letter-spacing="2.9" fill="#5C6A70">CIRURGIA DO APARELHO DIGESTIVO</text>
+            </svg>
+          </div>
+        </div>
+        <p style="font-size: 13px; line-height: 1.65; color: #5C6A70; margin: 0;">Respiro mínimo em todos os lados = altura do monograma (1×). Nada invade essa margem.</p>
+      </div>
+
+      <div style="background: #fff; border: 1px solid #E2DCD3; padding: clamp(20px,2.4vw,32px); animation: af-scale .8s cubic-bezier(.2,.7,.2,1) .08s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Tamanho mínimo</strong>
+        <div style="margin: 20px 0; display: grid; gap: 18px;">
+          <svg viewBox="0 0 420 96" style="width: 260px; height: auto; color: #0F1417;">
+            <circle cx="46" cy="48" r="43" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+            <text x="46" y="49" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="33" letter-spacing="1.5" fill="currentColor">AF</text>
+            <text x="112" y="42" font-family="Spectral, serif" font-size="30" fill="currentColor">Dr. Alberto Fagali</text>
+            <line x1="112" y1="57" x2="404" y2="57" stroke="#A8663C" stroke-width="1"></line>
+            <text x="112" y="79" font-family="Archivo, sans-serif" font-size="11" letter-spacing="2.9" fill="#5C6A70">CIRURGIA DO APARELHO DIGESTIVO</text>
+          </svg>
+          <span style="font-size: 12px; color: #6E675C; letter-spacing: .08em;">160 px — digital mínimo (horizontal)</span>
+        </div>
+        <p style="font-size: 13px; line-height: 1.65; color: #5C6A70; margin: 0;">Abaixo de 160 px a linha de especialidade sai; use o nome sozinho ou o monograma.</p>
+      </div>
+
+      <div style="background: #fff; border: 1px solid #E2DCD3; padding: clamp(20px,2.4vw,32px); animation: af-scale .8s cubic-bezier(.2,.7,.2,1) .16s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Usos incorretos</strong>
+        <div style="display: grid; gap: 10px; margin-top: 20px;">
+          <div style="display: flex; gap: 12px; align-items: baseline; font-size: 13.5px; line-height: 1.6; color: #2A363B;"><span style="color: #A8663C;">✕</span><span>Distorcer, inclinar ou condensar o logotipo.</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline; font-size: 13.5px; line-height: 1.6; color: #2A363B;"><span style="color: #A8663C;">✕</span><span>Aplicar sobre foto sem contraste ou máscara escura.</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline; font-size: 13.5px; line-height: 1.6; color: #2A363B;"><span style="color: #A8663C;">✕</span><span>Trocar a tipografia ou recolorir as letras.</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline; font-size: 13.5px; line-height: 1.6; color: #2A363B;"><span style="color: #A8663C;">✕</span><span>Incluir CRM/RQE dentro do logotipo.</span></div>
+          <div style="display: flex; gap: 12px; align-items: baseline; font-size: 13.5px; line-height: 1.6; color: #2A363B;"><span style="color: #A8663C;">✕</span><span>Adicionar sombra, contorno ou gradiente.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 COR ============ -->
+  <section data-screen-label="02 Cor" style="padding: clamp(56px,8vw,120px) clamp(20px,5vw,72px); background: #fff; border-bottom: 1px solid #E2DCD3;">
+    <div style="display: grid; gap: 10px; margin-bottom: clamp(32px,5vw,56px); animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 26%;">
+      <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">02 — Cor</span>
+      <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,4.2vw,52px); line-height: 1.1; margin: 0; letter-spacing: -.015em;">Grafite, papel e cobre</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: #5C6A70; max-width: 62ch; margin: 0; text-wrap: pretty;">A paleta vem do próprio ensaio fotográfico: fundo grafite quase preto, parede terracota e couro caramelo. Grafite carrega autoridade, o papel dá o ar clínico, o cobre aparece em doses pequenas.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,168px),1fr)); gap: 1px; background: #E2DCD3; border: 1px solid #E2DCD3; animation: af-mask 1.1s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+      <div style="background: #0F1417; padding: clamp(24px,3vw,36px); min-height: clamp(160px,20vw,230px); display: grid; align-content: end; gap: 6px; color: #F7F5F2;">
+        <strong style="font-size: 13.5px; font-weight: 600;">Grafite</strong>
+        <span style="font-size: 12.5px; color: #A9B4BA; font-variant-numeric: tabular-nums;">#0F1417</span>
+        <span style="font-size: 11.5px; color: #7F8D94; line-height: 1.5;">Base escura, textos em fundo claro</span>
+      </div>
+      <div style="background: #2A363B; padding: clamp(24px,3vw,36px); min-height: clamp(160px,20vw,230px); display: grid; align-content: end; gap: 6px; color: #F7F5F2;">
+        <strong style="font-size: 13.5px; font-weight: 600;">Grafite claro</strong>
+        <span style="font-size: 12.5px; color: #B9C2C7; font-variant-numeric: tabular-nums;">#2A363B</span>
+        <span style="font-size: 11.5px; color: #97A3A9; line-height: 1.5;">Corpo de texto</span>
+      </div>
+      <div style="background: #5C6A70; padding: clamp(24px,3vw,36px); min-height: clamp(160px,20vw,230px); display: grid; align-content: end; gap: 6px; color: #fff;">
+        <strong style="font-size: 13.5px; font-weight: 600;">Ardósia</strong>
+        <span style="font-size: 12.5px; color: #E6EAEC; font-variant-numeric: tabular-nums;">#5C6A70</span>
+        <span style="font-size: 11.5px; color: #D5DBDE; line-height: 1.5;">Texto secundário, legendas</span>
+      </div>
+      <div style="background: #A8663C; padding: clamp(24px,3vw,36px); min-height: clamp(160px,20vw,230px); display: grid; align-content: end; gap: 6px; color: #fff;">
+        <strong style="font-size: 13.5px; font-weight: 600;">Cobre</strong>
+        <span style="font-size: 12.5px; color: #fff; font-variant-numeric: tabular-nums;">#A8663C</span>
+        <span style="font-size: 11.5px; color: #fff; line-height: 1.5;">Acento: filetes, ícones, CTA</span>
+      </div>
+      <div style="background: #EDE9E3; padding: clamp(24px,3vw,36px); min-height: clamp(160px,20vw,230px); display: grid; align-content: end; gap: 6px;">
+        <strong style="font-size: 13.5px; font-weight: 600;">Areia</strong>
+        <span style="font-size: 12.5px; color: #5C6A70; font-variant-numeric: tabular-nums;">#EDE9E3</span>
+        <span style="font-size: 11.5px; color: #6E675C; line-height: 1.5;">Seções alternadas, cards</span>
+      </div>
+      <div style="background: #F7F5F2; padding: clamp(24px,3vw,36px); min-height: clamp(160px,20vw,230px); display: grid; align-content: end; gap: 6px;">
+        <strong style="font-size: 13.5px; font-weight: 600;">Papel</strong>
+        <span style="font-size: 12.5px; color: #5C6A70; font-variant-numeric: tabular-nums;">#F7F5F2</span>
+        <span style="font-size: 11.5px; color: #6E675C; line-height: 1.5;">Fundo padrão do site</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,280px),1fr)); gap: clamp(20px,2.5vw,36px); margin-top: clamp(28px,3.5vw,48px);">
+      <div style="display: grid; gap: 12px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Proporção de uso</strong>
+        <div style="display: flex; height: 44px; border: 1px solid #E2DCD3;">
+          <div style="flex: 62; background: #F7F5F2;"></div>
+          <div style="flex: 22; background: #0F1417;"></div>
+          <div style="flex: 10; background: #EDE9E3;"></div>
+          <div style="flex: 6; background: #A8663C;"></div>
+        </div>
+        <p style="font-size: 13.5px; line-height: 1.65; color: #5C6A70; margin: 0;">Papel 62% · Grafite 22% · Areia 10% · Cobre 6%. O cobre nunca cobre grandes áreas.</p>
+      </div>
+      <div style="display: grid; gap: 12px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .1s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Pares aprovados</strong>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px,1fr)); gap: 8px;">
+          <div style="background: #F7F5F2; border: 1px solid #E2DCD3; padding: 14px; font-size: 13px; color: #2A363B;">Texto grafite<br /><span style="font-size: 11.5px; color: #6E675C;">14.1:1</span></div>
+          <div style="background: #0F1417; padding: 14px; font-size: 13px; color: #F7F5F2;">Texto papel<br /><span style="font-size: 11.5px; color: #A9B4BA;">17.0:1</span></div>
+          <div style="background: #9F5F35; padding: 14px; font-size: 13px; color: #fff;">Botão cobre<br /><span style="font-size: 11.5px; color: #fff;">5.2:1</span></div>
+          <div style="background: #F7F5F2; border: 1px solid #E2DCD3; padding: 14px; font-size: 13px; color: #8E5330;">Rótulo cobre<br /><span style="font-size: 11.5px; color: #6E675C;">5.5:1</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 TIPOGRAFIA ============ -->
+  <section data-screen-label="03 Tipografia" style="padding: clamp(56px,8vw,120px) clamp(20px,5vw,72px); border-bottom: 1px solid #E2DCD3;">
+    <div style="display: grid; gap: 10px; margin-bottom: clamp(32px,5vw,56px); animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 26%;">
+      <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">03 — Tipografia</span>
+      <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,4.2vw,52px); line-height: 1.1; margin: 0; letter-spacing: -.015em;">Spectral e Archivo</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: #5C6A70; max-width: 62ch; margin: 0; text-wrap: pretty;">Serifa para o que a marca afirma; grotesca para o que o paciente precisa ler rápido. Duas famílias, nada além.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,320px),1fr)); gap: 1px; background: #E2DCD3; border: 1px solid #E2DCD3; margin-bottom: clamp(24px,3vw,40px);">
+      <div style="background: #fff; padding: clamp(24px,3vw,40px); display: grid; gap: 16px; animation: af-left .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+        <div style="font-family: Spectral, serif; font-size: clamp(60px,9vw,120px); line-height: .9; color: #0F1417;">Aa</div>
+        <div style="display: grid; gap: 6px;">
+          <strong style="font-size: 15px; font-weight: 600;">Spectral</strong>
+          <span style="font-size: 13.5px; color: #5C6A70; line-height: 1.6;">Títulos, nome da marca, números de destaque. Pesos 300 / 400 / 500. Tracking negativo em corpos grandes (-.015em).</span>
+          <span style="font-family: Spectral, serif; font-size: 15px; color: #2A363B; letter-spacing: .02em; margin-top: 6px;">ABCDEFGHIJKLM 0123456789</span>
+        </div>
+      </div>
+      <div style="background: #fff; padding: clamp(24px,3vw,40px); display: grid; gap: 16px; animation: af-right .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+        <div style="font-size: clamp(60px,9vw,120px); line-height: .9; font-weight: 500; color: #0F1417;">Aa</div>
+        <div style="display: grid; gap: 6px;">
+          <strong style="font-size: 15px; font-weight: 600;">Archivo</strong>
+          <span style="font-size: 13.5px; color: #5C6A70; line-height: 1.6;">Corpo de texto, rótulos, botões, listas clínicas. Pesos 400 / 500 / 600. Rótulos em caixa alta com tracking .2em.</span>
+          <span style="font-size: 15px; color: #2A363B; margin-top: 6px;">ABCDEFGHIJKLM 0123456789</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: grid; gap: 1px; background: #E2DCD3; border: 1px solid #E2DCD3;">
+      <div style="background: #fff; padding: clamp(18px,2.4vw,30px); display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; animation: af-rise .7s ease-out both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <span style="font-family: Spectral, serif; font-weight: 300; font-size: clamp(30px,5vw,64px); line-height: 1.05; letter-spacing: -.02em; color: #0F1417;">Dr. Alberto Fagali</span>
+        <span style="font-size: 11.5px; color: #6E675C; text-align: right; letter-spacing: .06em;">H1 · Spectral 300 · 64/67</span>
+      </div>
+      <div style="background: #fff; padding: clamp(18px,2.4vw,30px); display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; animation: af-rise .7s ease-out both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <span style="font-family: Spectral, serif; font-size: clamp(24px,3.4vw,40px); line-height: 1.12; color: #0F1417;">Cirurgia Bariátrica e Metabólica</span>
+        <span style="font-size: 11.5px; color: #6E675C; text-align: right; letter-spacing: .06em;">H2 · Spectral 400 · 40/45</span>
+      </div>
+      <div style="background: #fff; padding: clamp(18px,2.4vw,30px); display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; animation: af-rise .7s ease-out both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <span style="font-size: clamp(17px,1.6vw,22px); font-weight: 500; line-height: 1.35; color: #0F1417;">Indicação individualizada e acompanhamento próximo</span>
+        <span style="font-size: 11.5px; color: #6E675C; text-align: right; letter-spacing: .06em;">H3 · Archivo 500 · 22/30</span>
+      </div>
+      <div style="background: #fff; padding: clamp(18px,2.4vw,30px); display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; animation: af-rise .7s ease-out both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <span style="font-size: 17px; line-height: 1.75; color: #2A363B; max-width: 66ch;">Cada paciente é avaliado de forma individual. A escolha do tratamento considera sua história clínica, exames, características anatômicas, expectativas e necessidades.</span>
+        <span style="font-size: 11.5px; color: #6E675C; text-align: right; letter-spacing: .06em;">Corpo · Archivo 400 · 17/30</span>
+      </div>
+      <div style="background: #fff; padding: clamp(18px,2.4vw,30px); display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; animation: af-rise .7s ease-out both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">Áreas de atuação</span>
+        <span style="font-size: 11.5px; color: #6E675C; text-align: right; letter-spacing: .06em;">Rótulo · Archivo 500 · 11.5 / .24em</span>
+      </div>
+      <div style="background: #fff; padding: clamp(18px,2.4vw,30px); display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; animation: af-rise .7s ease-out both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <span style="font-size: 13px; line-height: 1.6; color: #5C6A70;">CRM-SP 135.929 | RQE 564531 — informação legal, sempre abaixo do nome, nunca dentro do logotipo.</span>
+        <span style="font-size: 11.5px; color: #6E675C; text-align: right; letter-spacing: .06em;">Legal · Archivo 400 · 13/21</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 ÍCONES E FOTOGRAFIA ============ -->
+  <section data-screen-label="04 Icones e fotografia" style="padding: clamp(56px,8vw,120px) clamp(20px,5vw,72px); background: #EDE9E3; border-bottom: 1px solid #E2DCD3;">
+    <div style="display: grid; gap: 10px; margin-bottom: clamp(32px,5vw,56px); animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 26%;">
+      <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">04 — Ícones e fotografia</span>
+      <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,4.2vw,52px); line-height: 1.1; margin: 0; letter-spacing: -.015em;">Sinais geométricos, não ilustrações</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: #5C6A70; max-width: 62ch; margin: 0; text-wrap: pretty;">Ícones de traço 1,5 px, grade de 32 px, cantos vivos, cobre sobre papel. Marcam a área de atuação sem representar órgãos ou procedimentos.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(50%,150px),1fr)); gap: 1px; background: #DCD6CE; border: 1px solid #DCD6CE;">
+      <div style="background: #F7F5F2; padding: clamp(18px,2.4vw,28px); display: grid; gap: 14px; animation: af-scale .7s ease-out both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <svg viewBox="0 0 32 32" style="width: 40px; height: 40px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="13"></circle><path d="M16 3 v26"></path></svg>
+        <span style="font-size: 13px; line-height: 1.5; color: #2A363B;">Esôfago<br />e estômago</span>
+      </div>
+      <div style="background: #F7F5F2; padding: clamp(18px,2.4vw,28px); display: grid; gap: 14px; animation: af-scale .7s ease-out .06s both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <svg viewBox="0 0 32 32" style="width: 40px; height: 40px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 11 a6 6 0 0 1 12 0 a6 6 0 0 0 12 0"></path><path d="M4 21 a6 6 0 0 0 12 0 a6 6 0 0 1 12 0"></path></svg>
+        <span style="font-size: 13px; line-height: 1.5; color: #2A363B;">Intestino<br />delgado</span>
+      </div>
+      <div style="background: #F7F5F2; padding: clamp(18px,2.4vw,28px); display: grid; gap: 14px; animation: af-scale .7s ease-out .12s both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <svg viewBox="0 0 32 32" style="width: 40px; height: 40px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="9"></circle><path d="M6 12 h20"></path></svg>
+        <span style="font-size: 13px; line-height: 1.5; color: #2A363B;">Vesícula e<br />vias biliares</span>
+      </div>
+      <div style="background: #F7F5F2; padding: clamp(18px,2.4vw,28px); display: grid; gap: 14px; animation: af-scale .7s ease-out .18s both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <svg viewBox="0 0 32 32" style="width: 40px; height: 40px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="8" width="26" height="16"></rect><path d="M16 8 v16"></path></svg>
+        <span style="font-size: 13px; line-height: 1.5; color: #2A363B;">Hérnias da<br />parede abdominal</span>
+      </div>
+      <div style="background: #F7F5F2; padding: clamp(18px,2.4vw,28px); display: grid; gap: 14px; animation: af-scale .7s ease-out .24s both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <svg viewBox="0 0 32 32" style="width: 40px; height: 40px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3 L29 16 L16 29 L3 16 Z"></path><path d="M9 16 h14"></path></svg>
+        <span style="font-size: 13px; line-height: 1.5; color: #2A363B;">Bariátrica e<br />metabólica</span>
+      </div>
+      <div style="background: #F7F5F2; padding: clamp(18px,2.4vw,28px); display: grid; gap: 14px; animation: af-scale .7s ease-out .3s both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <svg viewBox="0 0 32 32" style="width: 40px; height: 40px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 5 v10 a10 10 0 0 0 20 0 V5"></path><path d="M7 27 h18"></path></svg>
+        <span style="font-size: 13px; line-height: 1.5; color: #2A363B;">Cólon<br />e reto</span>
+      </div>
+      <div style="background: #F7F5F2; padding: clamp(18px,2.4vw,28px); display: grid; gap: 14px; animation: af-scale .7s ease-out .36s both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <svg viewBox="0 0 32 32" style="width: 40px; height: 40px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"></circle><circle cx="16" cy="16" r="4"></circle></svg>
+        <span style="font-size: 13px; line-height: 1.5; color: #2A363B;">Cirurgia<br />robótica</span>
+      </div>
+      <div style="background: #F7F5F2; padding: clamp(18px,2.4vw,28px); display: grid; gap: 14px; animation: af-scale .7s ease-out .42s both; animation-timeline: view(); animation-range: entry 0% cover 20%;">
+        <svg viewBox="0 0 32 32" style="width: 40px; height: 40px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="16" r="8"></circle><circle cx="21" cy="16" r="8"></circle></svg>
+        <span style="font-size: 13px; line-height: 1.5; color: #2A363B;">Acompanhamento<br />multidisciplinar</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,240px),1fr)); gap: clamp(12px,1.6vw,20px); margin-top: clamp(28px,3.5vw,48px);">
+      <figure style="margin: 0; display: grid; gap: 10px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <div style="overflow: hidden; background: #0F1417;">
+          <img src="assets/retrato-escuro.webp" alt="Retrato em fundo grafite" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; animation: af-zoom 1.4s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 30%;" />
+        </div>
+        <figcaption style="font-size: 12.5px; line-height: 1.6; color: #5C6A70;">Retrato grafite — hero e capas. Luz lateral, fundo escuro, olhar direto.</figcaption>
+      </figure>
+      <figure style="margin: 0; display: grid; gap: 10px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .08s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <div style="overflow: hidden; background: #0F1417;">
+          <img src="assets/jaleco.webp" alt="Retrato de jaleco" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; animation: af-zoom 1.4s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 30%;" />
+        </div>
+        <figcaption style="font-size: 12.5px; line-height: 1.6; color: #5C6A70;">Jaleco — seção Sobre e credenciais. Um único uso por página.</figcaption>
+      </figure>
+      <figure style="margin: 0; display: grid; gap: 10px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .16s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <div style="overflow: hidden; background: #EDE9E3;">
+          <img src="assets/poltrona-clara.webp" alt="Retrato em fundo claro" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; animation: af-zoom 1.4s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 30%;" />
+        </div>
+        <figcaption style="font-size: 12.5px; line-height: 1.6; color: #5C6A70;">Fundo claro — blocos em papel, cartões de equipe.</figcaption>
+      </figure>
+      <figure style="margin: 0; display: grid; gap: 10px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .24s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <div style="overflow: hidden; background: #A8663C;">
+          <img src="assets/mesa-terracota.webp" alt="Consulta em ambiente terracota" style="width: 100%; aspect-ratio: 3/4; object-fit: cover; animation: af-zoom 1.4s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 30%;" />
+        </div>
+        <figcaption style="font-size: 12.5px; line-height: 1.6; color: #5C6A70;">Ambiente terracota — consulta e contato. Nunca com texto sobreposto claro.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 05 COMPONENTES ============ -->
+  <section data-screen-label="05 Componentes" style="padding: clamp(56px,8vw,120px) clamp(20px,5vw,72px); border-bottom: 1px solid #E2DCD3;">
+    <div style="display: grid; gap: 10px; margin-bottom: clamp(32px,5vw,56px); animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 26%;">
+      <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">05 — Componentes</span>
+      <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,4.2vw,52px); line-height: 1.1; margin: 0; letter-spacing: -.015em;">Peças da interface</h2>
+    </div>
+
+    <div style="display: grid; gap: clamp(28px,3.5vw,48px);">
+      <div style="display: grid; gap: 18px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+        <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Botões e etiquetas</strong>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
+          <a href="{{ whatsappUrl }}" style="background: #9F5F35; color: #fff; padding: 17px 30px; font-size: 14.5px; font-weight: 500; letter-spacing: .04em; display: inline-flex; align-items: center; gap: 10px; min-height: 52px; transition: background .35s ease, transform .35s ease;" style-hover="background: #8E5330; transform: translateY(-2px); color: #fff;">Agende sua consulta</a>
+          <a href="#areas" style="border: 1px solid #2A363B; color: #0F1417; padding: 16px 29px; font-size: 14.5px; font-weight: 500; letter-spacing: .04em; display: inline-flex; align-items: center; min-height: 52px; transition: background .35s ease, color .35s ease;" style-hover="background: #0F1417; color: #F7F5F2;">Conheça as áreas de atuação</a>
+          <a href="#areas" style="color: #8E5330; font-size: 14.5px; font-weight: 500; letter-spacing: .04em; border-bottom: 1px solid #D8C3B2; padding-bottom: 3px; transition: border-color .35s ease;" style-hover="border-color: #8E5330; color: #8E5330;">Ver detalhes →</a>
+          <span style="border: 1px solid #DCD6CE; background: #fff; color: #5C6A70; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; padding: 9px 14px;">Videolaparoscopia</span>
+          <span style="background: #0F1417; color: #F7F5F2; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; padding: 9px 14px;">Cirurgia robótica</span>
+        </div>
+      </div>
+
+      <div style="display: grid; gap: 18px;">
+        <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Cards de pilar</strong>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,260px),1fr)); gap: clamp(14px,1.8vw,24px);">
+          <article style="background: #fff; border: 1px solid #E2DCD3; border-top: 2px solid #A8663C; padding: clamp(24px,3vw,36px); display: grid; gap: 16px; align-content: start; transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;" style-hover="transform: translateY(-6px); box-shadow: 0 18px 40px -24px rgba(15,20,23,.35);">
+            <span style="font-family: Spectral, serif; font-size: 15px; color: #A8663C;">01</span>
+            <h3 style="font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0; color: #0F1417;">Experiência em cirurgia digestiva e bariátrica</h3>
+            <p style="font-size: 15px; line-height: 1.7; color: #5C6A70; margin: 0; text-wrap: pretty;">Experiência profissional dedicada ao tratamento cirúrgico das doenças do aparelho digestivo e à cirurgia bariátrica e metabólica, acompanhando o paciente desde a avaliação até o pós-operatório.</p>
+          </article>
+          <article style="background: #fff; border: 1px solid #E2DCD3; border-top: 2px solid #A8663C; padding: clamp(24px,3vw,36px); display: grid; gap: 16px; align-content: start; transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .08s both; animation-timeline: view(); animation-range: entry 0% cover 22%;" style-hover="transform: translateY(-6px); box-shadow: 0 18px 40px -24px rgba(15,20,23,.35);">
+            <span style="font-family: Spectral, serif; font-size: 15px; color: #A8663C;">02</span>
+            <h3 style="font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0; color: #0F1417;">Cirurgia minimamente invasiva e robótica</h3>
+            <p style="font-size: 15px; line-height: 1.7; color: #5C6A70; margin: 0; text-wrap: pretty;">Utilização de técnicas videolaparoscópicas e robóticas quando indicadas, buscando menor agressão cirúrgica, recuperação adequada e segurança em cada procedimento.</p>
+          </article>
+          <article style="background: #fff; border: 1px solid #E2DCD3; border-top: 2px solid #A8663C; padding: clamp(24px,3vw,36px); display: grid; gap: 16px; align-content: start; transition: transform .4s cubic-bezier(.2,.7,.2,1), box-shadow .4s ease; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .16s both; animation-timeline: view(); animation-range: entry 0% cover 22%;" style-hover="transform: translateY(-6px); box-shadow: 0 18px 40px -24px rgba(15,20,23,.35);">
+            <span style="font-family: Spectral, serif; font-size: 15px; color: #A8663C;">03</span>
+            <h3 style="font-size: 19px; font-weight: 500; line-height: 1.3; margin: 0; color: #0F1417;">Indicação individualizada e acompanhamento próximo</h3>
+            <p style="font-size: 15px; line-height: 1.7; color: #5C6A70; margin: 0; text-wrap: pretty;">Cada paciente é avaliado de forma individual. A escolha do tratamento considera sua história clínica, exames, características anatômicas, expectativas e necessidades, com acompanhamento próximo antes e depois da cirurgia.</p>
+          </article>
+        </div>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,300px),1fr)); gap: clamp(20px,2.5vw,36px);">
+        <div style="display: grid; gap: 18px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+          <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Formulário de contato</strong>
+          <form style="background: #fff; border: 1px solid #E2DCD3; padding: clamp(24px,3vw,36px); display: grid; gap: 18px;" onSubmit="{{ noSubmit }}">
+            <label style="display: grid; gap: 8px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #5C6A70;">Nome completo
+              <input type="text" placeholder="Como podemos chamar você" style="font-family: Archivo, sans-serif; font-size: 15px; color: #0F1417; padding: 14px 16px; border: 1px solid #DCD6CE; background: #F7F5F2; min-height: 50px; outline: none; letter-spacing: normal; text-transform: none; transition: border-color .3s ease;" style-focus="border-color: #A8663C; background: #fff;" />
+            </label>
+            <label style="display: grid; gap: 8px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #5C6A70;">WhatsApp
+              <input type="tel" placeholder="(12) 90000-0000" style="font-family: Archivo, sans-serif; font-size: 15px; color: #0F1417; padding: 14px 16px; border: 1px solid #DCD6CE; background: #F7F5F2; min-height: 50px; outline: none; letter-spacing: normal; text-transform: none; transition: border-color .3s ease;" style-focus="border-color: #A8663C; background: #fff;" />
+            </label>
+            <label style="display: grid; gap: 8px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: #5C6A70;">Motivo da consulta
+              <textarea rows="3" placeholder="Descreva brevemente" style="font-family: Archivo, sans-serif; font-size: 15px; color: #0F1417; padding: 14px 16px; border: 1px solid #DCD6CE; background: #F7F5F2; outline: none; resize: vertical; letter-spacing: normal; text-transform: none; transition: border-color .3s ease;" style-focus="border-color: #A8663C; background: #fff;"></textarea>
+            </label>
+            <button type="submit" style="font-family: Archivo, sans-serif; background: #9F5F35; color: #fff; border: 0; padding: 17px 28px; font-size: 14.5px; font-weight: 500; letter-spacing: .04em; min-height: 52px; cursor: pointer; transition: background .35s ease;" style-hover="background: #8E5330;">Enviar solicitação</button>
+            <span style="font-size: 12px; line-height: 1.6; color: #6E675C;">Retorno da secretaria de segunda a sexta, das 9h às 18h.</span>
+          </form>
+        </div>
+
+        <div style="display: grid; gap: 18px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .1s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+          <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Depoimento, convênios e local</strong>
+          <blockquote style="background: #EDE9E3; border-left: 2px solid #A8663C; padding: clamp(22px,2.6vw,32px); margin: 0; display: grid; gap: 14px;">
+            <p style="font-family: Spectral, serif; font-size: clamp(17px,1.8vw,21px); line-height: 1.55; color: #0F1417; margin: 0;">Espaço reservado para depoimentos espontâneos importados da ficha do Google.</p>
+            <span style="font-size: 12.5px; color: #5C6A70; letter-spacing: .06em;">Nome do paciente · Google Reviews</span>
+          </blockquote>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <span style="border: 1px solid #DCD6CE; background: #fff; padding: 14px 20px; font-size: 13.5px; color: #2A363B;">Bradesco Saúde</span>
+            <span style="border: 1px solid #DCD6CE; background: #fff; padding: 14px 20px; font-size: 13.5px; color: #2A363B;">SulAmérica</span>
+            <span style="border: 1px solid #DCD6CE; background: #fff; padding: 14px 20px; font-size: 13.5px; color: #2A363B;">Mediservice</span>
+          </div>
+          <div style="background: #fff; border: 1px solid #E2DCD3; padding: clamp(22px,2.6vw,32px); display: grid; gap: 8px;">
+            <span style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #8E5330;">Unidade</span>
+            <strong style="font-family: Spectral, serif; font-size: 21px; font-weight: 500; color: #0F1417;">Gastrovale São José dos Campos</strong>
+            <span style="font-size: 14.5px; line-height: 1.7; color: #5C6A70;">Av. Nove de Julho, 685, Sala 51 – Jardim Apolo – Edifício São José Prime – São José dos Campos – SP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 06 MOVIMENTO ============ -->
+  <section data-screen-label="06 Movimento" style="padding: clamp(56px,8vw,120px) clamp(20px,5vw,72px); background: #0F1417; color: #F7F5F2;">
+    <div style="display: grid; gap: 10px; margin-bottom: clamp(32px,5vw,56px); animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 26%;">
+      <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #C6906B;">06 — Movimento</span>
+      <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,4.2vw,52px); line-height: 1.1; margin: 0; letter-spacing: -.015em; color: #F7F5F2;">Entradas marcantes, nunca inquietas</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: #A9B4BA; max-width: 62ch; margin: 0; text-wrap: pretty;">Cada bloco entra uma única vez, ao chegar na viewport, com curva <span style="color: #C6906B;">cubic-bezier(.2,.7,.2,1)</span>. Nada pisca, nada repete, nada gira.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,220px),1fr)); gap: 1px; background: #26313A; border: 1px solid #26313A;">
+      <div style="background: #141B1F; padding: clamp(22px,2.6vw,32px); display: grid; gap: 14px; min-height: 210px; align-content: start;">
+        <div style="height: 64px; background: #C6906B; animation: af-rise 1s cubic-bezier(.2,.7,.2,1) infinite alternate;"></div>
+        <strong style="font-size: 14.5px; font-weight: 600;">Rise</strong>
+        <span style="font-size: 13px; line-height: 1.6; color: #A9B4BA;">Padrão para títulos e cards. 42 px de deslocamento, 900 ms.</span>
+      </div>
+      <div style="background: #141B1F; padding: clamp(22px,2.6vw,32px); display: grid; gap: 14px; min-height: 210px; align-content: start;">
+        <div style="height: 64px; background: #C6906B; animation: af-blur 1.4s cubic-bezier(.2,.7,.2,1) infinite alternate;"></div>
+        <strong style="font-size: 14.5px; font-weight: 600;">Blur up</strong>
+        <span style="font-size: 13px; line-height: 1.6; color: #A9B4BA;">Reservado ao hero e ao logotipo. Uma vez por página.</span>
+      </div>
+      <div style="background: #141B1F; padding: clamp(22px,2.6vw,32px); display: grid; gap: 14px; min-height: 210px; align-content: start;">
+        <div style="height: 64px; background: #C6906B; animation: af-mask 1.2s cubic-bezier(.2,.7,.2,1) infinite alternate;"></div>
+        <strong style="font-size: 14.5px; font-weight: 600;">Mask reveal</strong>
+        <span style="font-size: 13px; line-height: 1.6; color: #A9B4BA;">Faixas de cor, tabelas e imagens de largura total.</span>
+      </div>
+      <div style="background: #141B1F; padding: clamp(22px,2.6vw,32px); display: grid; gap: 14px; min-height: 210px; align-content: start;">
+        <div style="height: 64px; background: #C6906B; animation: af-zoom 2s cubic-bezier(.2,.7,.2,1) infinite alternate;"></div>
+        <strong style="font-size: 14.5px; font-weight: 600;">Slow zoom</strong>
+        <span style="font-size: 13px; line-height: 1.6; color: #A9B4BA;">Fotografia: 1.14 → 1.0 conforme o scroll avança.</span>
+      </div>
+      <div style="background: #141B1F; padding: clamp(22px,2.6vw,32px); display: grid; gap: 14px; min-height: 210px; align-content: start;">
+        <div style="height: 2px; background: #C6906B; transform-origin: left; animation: af-line 1.1s cubic-bezier(.2,.7,.2,1) infinite alternate; margin-top: 31px; margin-bottom: 31px;"></div>
+        <strong style="font-size: 14.5px; font-weight: 600;">Line grow</strong>
+        <span style="font-size: 13px; line-height: 1.6; color: #A9B4BA;">Filetes de cobre sob rótulos e divisões de seção.</span>
+      </div>
+      <div style="background: #141B1F; padding: clamp(22px,2.6vw,32px); display: grid; gap: 14px; min-height: 210px; align-content: start;">
+        <div style="display: grid; gap: 6px;">
+          <div style="height: 16px; background: #C6906B; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) infinite alternate;"></div>
+          <div style="height: 16px; background: #C6906B; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .1s infinite alternate;"></div>
+          <div style="height: 16px; background: #C6906B; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .2s infinite alternate;"></div>
+        </div>
+        <strong style="font-size: 14.5px; font-weight: 600;">Stagger 80 ms</strong>
+        <span style="font-size: 13px; line-height: 1.6; color: #A9B4BA;">Listas e grades: atraso de 80 ms por item, máximo de 6.</span>
+      </div>
+    </div>
+    <p style="font-size: 13px; line-height: 1.7; color: #7F8D94; margin: 24px 0 0; max-width: 70ch;">Acessibilidade: com <span style="color: #C6906B;">prefers-reduced-motion</span> ativo, todas as entradas viram fade de 200 ms. Demonstrações acima em loop apenas para leitura do padrão.</p>
+  </section>
+
+  <!-- ============ 07 HOME ============ -->
+  <section data-screen-label="07 Home montada" style="background: #F7F5F2;">
+    <div style="padding: clamp(56px,8vw,110px) clamp(20px,5vw,72px) clamp(24px,3vw,40px); display: grid; gap: 10px;">
+      <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">07 — Aplicação</span>
+      <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,4.2vw,52px); line-height: 1.1; margin: 0; letter-spacing: -.015em;">Home montada</h2>
+      <p style="font-size: 16px; line-height: 1.7; color: #5C6A70; max-width: 62ch; margin: 0;">Todo o conteúdo abaixo é o texto do briefing, aplicado ao sistema.</p>
+    </div>
+
+    <div style="border-top: 1px solid #E2DCD3; border-bottom: 1px solid #E2DCD3; background: #fff;">
+      <!-- nav -->
+      <header style="display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap; padding: 18px clamp(20px,5vw,72px); border-bottom: 1px solid #E2DCD3; background: #fff; position: sticky; top: 0; z-index: 20;">
+        <svg viewBox="0 0 420 96" style="width: 216px; height: auto; color: #0F1417; flex: 0 0 auto;" role="img" aria-label="Dr. Alberto Fagali">
+          <circle cx="46" cy="48" r="43" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+          <text x="46" y="49" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="33" letter-spacing="1.5" fill="currentColor">AF</text>
+          <text x="112" y="42" font-family="Spectral, serif" font-size="30" fill="currentColor">Dr. Alberto Fagali</text>
+          <line x1="112" y1="57" x2="404" y2="57" stroke="#A8663C" stroke-width="1"></line>
+          <text x="112" y="79" font-family="Archivo, sans-serif" font-size="11" letter-spacing="2.9" fill="#5C6A70">CIRURGIA DO APARELHO DIGESTIVO</text>
+        </svg>
+        <nav style="display: flex; gap: clamp(14px,2vw,30px); flex-wrap: wrap; align-items: center; font-size: 13.5px; letter-spacing: .04em;">
+          <a href="#sobre" style="color: #2A363B;" style-hover="color: #8E5330;">Sobre</a>
+          <a href="#areas" style="color: #2A363B;" style-hover="color: #8E5330;">Áreas de atuação</a>
+          <a href="#bariatrica" style="color: #2A363B;" style-hover="color: #8E5330;">Bariátrica</a>
+          <a href="#refluxo" style="color: #2A363B;" style-hover="color: #8E5330;">Refluxo e hérnia de hiato</a>
+          <a href="#contato" style="color: #2A363B;" style-hover="color: #8E5330;">Contato</a>
+          <a href="{{ whatsappUrl }}" style="background: #9F5F35; color: #fff; padding: 13px 20px; font-weight: 500; min-height: 46px; display: inline-flex; align-items: center; transition: background .35s ease;" style-hover="background: #8E5330; color: #fff;">Agende sua consulta</a>
+        </nav>
+      </header>
+
+      <!-- hero -->
+      <div style="background: #0F1417; color: #F7F5F2; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,340px),1fr)); align-items: stretch;">
+        <div style="padding: clamp(40px,6vw,96px) clamp(20px,5vw,72px); display: grid; align-content: center; gap: clamp(20px,2.6vw,32px);">
+          <div style="display: grid; gap: 14px;">
+            <h1 style="font-family: Spectral, serif; font-weight: 300; font-size: clamp(38px,5.6vw,76px); line-height: 1.02; letter-spacing: -.025em; margin: 0; animation: af-blur 1.2s cubic-bezier(.2,.7,.2,1) .15s both;">Dr. Alberto Fagali</h1>
+            <div style="height: 1px; background: #C6906B; transform-origin: left; animation: af-line 1s cubic-bezier(.2,.7,.2,1) .5s both;"></div>
+            <p style="font-size: clamp(15px,1.5vw,19px); line-height: 1.5; color: #E4DED6; margin: 0; animation: af-rise 1s cubic-bezier(.2,.7,.2,1) .55s both;">Cirurgião do Aparelho Digestivo | Cirurgia Bariátrica e Metabólica</p>
+            <p style="font-size: 13.5px; letter-spacing: .12em; color: #8C9AA1; margin: 0; animation: af-rise 1s cubic-bezier(.2,.7,.2,1) .65s both;">CRM-SP 135.929 | RQE 564531</p>
+          </div>
+          <p style="font-size: clamp(15px,1.4vw,18px); line-height: 1.75; color: #A9B4BA; max-width: 52ch; margin: 0; text-wrap: pretty; animation: af-rise 1s cubic-bezier(.2,.7,.2,1) .75s both;">Cirurgia do aparelho digestivo e cirurgia bariátrica e metabólica, com indicação individualizada, técnicas minimamente invasivas e acompanhamento próximo em todas as etapas do tratamento.</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 14px; animation: af-rise 1s cubic-bezier(.2,.7,.2,1) .85s both;">
+            <a href="{{ whatsappUrl }}" style="background: #A8663C; color: #fff; padding: 18px 32px; font-size: 15px; font-weight: 500; letter-spacing: .04em; min-height: 54px; display: inline-flex; align-items: center; transition: background .35s ease, transform .35s ease;" style-hover="background: #C6906B; color: #0F1417; transform: translateY(-2px);">Agende sua consulta</a>
+            <a href="#areas" style="border: 1px solid #4A585F; color: #F7F5F2; padding: 17px 31px; font-size: 15px; font-weight: 500; letter-spacing: .04em; min-height: 54px; display: inline-flex; align-items: center; transition: background .35s ease, color .35s ease;" style-hover="background: #F7F5F2; color: #0F1417;">Conheça as áreas de atuação</a>
+          </div>
+        </div>
+        <div style="overflow: hidden; min-height: clamp(340px,52vw,680px);">
+          <img src="assets/retrato-escuro.webp" alt="Dr. Alberto Fagali" style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; animation: af-zoom 1.8s cubic-bezier(.2,.7,.2,1) .1s both;" />
+        </div>
+      </div>
+
+      <!-- pilares -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,280px),1fr)); gap: 1px; background: #E2DCD3;">
+        <article style="background: #fff; padding: clamp(28px,3.4vw,48px); display: grid; gap: 16px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+          <svg viewBox="0 0 32 32" style="width: 34px; height: 34px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="13"></circle><path d="M16 3 v26"></path></svg>
+          <h3 style="font-family: Spectral, serif; font-size: clamp(20px,2vw,25px); font-weight: 500; line-height: 1.25; margin: 0; color: #0F1417;">Experiência em cirurgia digestiva e bariátrica</h3>
+          <p style="font-size: 15.5px; line-height: 1.75; color: #5C6A70; margin: 0; text-wrap: pretty;">Experiência profissional dedicada ao tratamento cirúrgico das doenças do aparelho digestivo e à cirurgia bariátrica e metabólica, acompanhando o paciente desde a avaliação até o pós-operatório.</p>
+        </article>
+        <article style="background: #fff; padding: clamp(28px,3.4vw,48px); display: grid; gap: 16px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .1s both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+          <svg viewBox="0 0 32 32" style="width: 34px; height: 34px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="12"></circle><circle cx="16" cy="16" r="4"></circle></svg>
+          <h3 style="font-family: Spectral, serif; font-size: clamp(20px,2vw,25px); font-weight: 500; line-height: 1.25; margin: 0; color: #0F1417;">Cirurgia minimamente invasiva e robótica</h3>
+          <p style="font-size: 15.5px; line-height: 1.75; color: #5C6A70; margin: 0; text-wrap: pretty;">Utilização de técnicas videolaparoscópicas e robóticas quando indicadas, buscando menor agressão cirúrgica, recuperação adequada e segurança em cada procedimento.</p>
+        </article>
+        <article style="background: #fff; padding: clamp(28px,3.4vw,48px); display: grid; gap: 16px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .2s both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+          <svg viewBox="0 0 32 32" style="width: 34px; height: 34px; color: #A8663C;" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="16" r="8"></circle><circle cx="21" cy="16" r="8"></circle></svg>
+          <h3 style="font-family: Spectral, serif; font-size: clamp(20px,2vw,25px); font-weight: 500; line-height: 1.25; margin: 0; color: #0F1417;">Indicação individualizada e acompanhamento próximo</h3>
+          <p style="font-size: 15.5px; line-height: 1.75; color: #5C6A70; margin: 0; text-wrap: pretty;">Cada paciente é avaliado de forma individual. A escolha do tratamento considera sua história clínica, exames, características anatômicas, expectativas e necessidades, com acompanhamento próximo antes e depois da cirurgia.</p>
+        </article>
+      </div>
+
+      <!-- sobre -->
+      <div id="sobre" style="background: #F7F5F2; padding: clamp(48px,7vw,110px) clamp(20px,5vw,72px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,300px),1fr)); gap: clamp(28px,4vw,64px); align-items: start;">
+        <div style="overflow: hidden; background: #0F1417; animation: af-left 1s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 26%;">
+          <img src="assets/jaleco.webp" alt="Dr. Alberto Fagali de jaleco" style="width: 100%; aspect-ratio: 4/5; object-fit: cover; animation: af-zoom 1.6s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 40%;" />
+        </div>
+        <div style="display: grid; gap: 22px; animation: af-rise 1s cubic-bezier(.2,.7,.2,1) .1s both; animation-timeline: view(); animation-range: entry 0% cover 26%;">
+          <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">Sobre</span>
+          <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,3.6vw,46px); line-height: 1.12; margin: 0; letter-spacing: -.02em; color: #0F1417;">Sobre o Dr. Alberto Fagali</h2>
+          <p style="font-size: clamp(16px,1.4vw,19px); line-height: 1.6; color: #2A363B; margin: 0; font-family: Spectral, serif;">Cirurgia do Aparelho Digestivo com atuação em Cirurgia Bariátrica e Metabólica</p>
+          <div style="display: grid; gap: 16px; max-width: 62ch;">
+            <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">O Dr. Alberto Fagali é Cirurgião do Aparelho Digestivo, com atuação em cirurgia bariátrica e metabólica e cirurgia minimamente invasiva.</p>
+            <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">Formado pela Universidade de Alfenas (UNIFENAS), com especialização em Cirurgia do Aparelho Digestivo pela Universidade Federal de São Paulo (UNIFESP – Escola Paulista de Medicina).</p>
+            <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">É membro titular do Colégio Brasileiro de Cirurgia Digestiva (CBCD) e da Sociedade Brasileira de Cirurgia Bariátrica e Metabólica (SBCBM).</p>
+            <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">Dedica sua prática ao tratamento cirúrgico das doenças do aparelho digestivo, com atuação em doenças do esôfago, estômago, intestino, vesícula e vias biliares, hérnias e cirurgia bariátrica e metabólica.</p>
+            <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">Também atua com técnicas minimamente invasivas, incluindo videolaparoscopia e cirurgia robótica, sempre considerando a indicação adequada para cada paciente.</p>
+          </div>
+          <div style="display: grid; gap: 1px; background: #E2DCD3; border: 1px solid #E2DCD3; margin-top: 4px;">
+            <div style="background: #fff; padding: 20px 22px; display: grid; grid-template-columns: auto minmax(0,1fr); gap: 16px; align-items: start;">
+              <svg viewBox="0 0 32 32" style="width: 24px; height: 24px; color: #A8663C; margin-top: 2px;" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12 L16 5 L29 12 L16 19 Z"></path><path d="M26 14 v8"></path></svg>
+              <span style="font-size: 14.5px; line-height: 1.65; color: #2A363B;">Especialização em Cirurgia do Aparelho Digestivo pela UNIFESP – Escola Paulista de Medicina</span>
+            </div>
+            <div style="background: #fff; padding: 20px 22px; display: grid; grid-template-columns: auto minmax(0,1fr); gap: 16px; align-items: start;">
+              <svg viewBox="0 0 32 32" style="width: 24px; height: 24px; color: #A8663C; margin-top: 2px;" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="7" y="11" width="18" height="14"></rect><path d="M16 11 V4"></path><circle cx="16" cy="4" r="2"></circle></svg>
+              <span style="font-size: 14.5px; line-height: 1.65; color: #2A363B;">Certificação em Cirurgia Robótica pelo Instituto D'Or (São Paulo)</span>
+            </div>
+            <div style="background: #fff; padding: 20px 22px; display: grid; grid-template-columns: auto minmax(0,1fr); gap: 16px; align-items: start;">
+              <svg viewBox="0 0 32 32" style="width: 24px; height: 24px; color: #A8663C; margin-top: 2px;" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 27 h24"></path><path d="M7 27 V13"></path><path d="M16 27 V13"></path><path d="M25 27 V13"></path><path d="M3 13 L16 5 L29 13 Z"></path></svg>
+              <span style="font-size: 14.5px; line-height: 1.65; color: #2A363B;">Membro titular do CBCD e da SBCBM</span>
+            </div>
+            <div style="background: #fff; padding: 20px 22px; display: grid; grid-template-columns: auto minmax(0,1fr); gap: 16px; align-items: start;">
+              <svg viewBox="0 0 32 32" style="width: 24px; height: 24px; color: #A8663C; margin-top: 2px;" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="16" r="8"></circle><circle cx="21" cy="16" r="8"></circle></svg>
+              <span style="font-size: 14.5px; line-height: 1.65; color: #2A363B;">Acompanhamento próximo — pré e pós-operatório com equipe multidisciplinar</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- áreas -->
+      <div id="areas" style="background: #0F1417; color: #F7F5F2; padding: clamp(48px,7vw,110px) clamp(20px,5vw,72px); display: grid; gap: clamp(28px,4vw,56px);">
+        <div style="display: grid; gap: 12px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+          <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #C6906B;">Áreas de atuação</span>
+          <h2 style="font-family: Spectral, serif; font-weight: 300; font-size: clamp(30px,4.4vw,56px); line-height: 1.08; margin: 0; letter-spacing: -.02em;">Três frentes de atuação cirúrgica</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,300px),1fr)); gap: 1px; background: #26313A; border: 1px solid #26313A;">
+          <div style="background: #141B1F; padding: clamp(26px,3vw,40px); display: grid; gap: 26px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+            <div style="display: grid; gap: 14px;">
+              <svg viewBox="0 0 32 32" style="width: 32px; height: 32px; color: #C6906B;" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="16" cy="16" r="13"></circle><path d="M16 3 v26"></path></svg>
+              <h3 style="font-family: Spectral, serif; font-size: clamp(21px,2.1vw,27px); font-weight: 500; line-height: 1.2; margin: 0;">Cirurgia do Aparelho Digestivo</h3>
+            </div>
+            <div style="display: grid; gap: 20px;">
+              <div style="display: grid; gap: 8px;">
+                <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Esôfago e estômago</strong>
+                <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Doença do refluxo gastroesofágico<br />Hérnia de hiato<br />Acalasia<br />Outras doenças do esôfago com indicação cirúrgica<br />Doenças do estômago com indicação cirúrgica</span>
+              </div>
+              <div style="display: grid; gap: 8px;">
+                <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Intestino delgado</strong>
+                <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Doenças do intestino delgado<br />Tratamento cirúrgico de doenças selecionadas do aparelho digestivo</span>
+              </div>
+              <div style="display: grid; gap: 8px;">
+                <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Vesícula e vias biliares</strong>
+                <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Cálculos da vesícula biliar<br />Colecistite<br />Doenças das vias biliares<br />Outras doenças biliares com indicação cirúrgica</span>
+              </div>
+              <div style="display: grid; gap: 8px;">
+                <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Hérnias da parede abdominal</strong>
+                <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Hérnia inguinal<br />Hérnia umbilical<br />Hérnia epigástrica<br />Hérnia incisional<br />Outras hérnias da parede abdominal</span>
+              </div>
+              <div style="display: grid; gap: 8px;">
+                <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Cirurgia minimamente invasiva</strong>
+                <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Cirurgia por videolaparoscopia<br />Cirurgia robótica, quando indicada</span>
+              </div>
+            </div>
+          </div>
+          <div style="background: #141B1F; padding: clamp(26px,3vw,40px); display: grid; gap: 26px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .1s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+            <div style="display: grid; gap: 14px;">
+              <svg viewBox="0 0 32 32" style="width: 32px; height: 32px; color: #C6906B;" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 3 L29 16 L16 29 L3 16 Z"></path><path d="M9 16 h14"></path></svg>
+              <h3 style="font-family: Spectral, serif; font-size: clamp(21px,2.1vw,27px); font-weight: 500; line-height: 1.2; margin: 0;">Cirurgia Bariátrica e Metabólica</h3>
+            </div>
+            <div style="display: grid; gap: 8px;">
+              <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Tratamento cirúrgico da obesidade</strong>
+              <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Bypass gástrico<br />Sleeve gástrico (gastrectomia vertical)<br />Cirurgias revisionais<br />Cirurgia metabólica<br />Tratamento cirúrgico da obesidade e de suas doenças associadas</span>
+            </div>
+            <a href="#bariatrica" style="color: #C6906B; font-size: 14.5px; font-weight: 500; border-bottom: 1px solid #5A4636; padding-bottom: 4px; justify-self: start; transition: border-color .35s ease;" style-hover="border-color: #C6906B; color: #C6906B;">Ver a seção completa →</a>
+          </div>
+          <div style="background: #141B1F; padding: clamp(26px,3vw,40px); display: grid; gap: 26px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .2s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+            <div style="display: grid; gap: 14px;">
+              <svg viewBox="0 0 32 32" style="width: 32px; height: 32px; color: #C6906B;" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 5 v10 a10 10 0 0 0 20 0 V5"></path><path d="M7 27 h18"></path></svg>
+              <h3 style="font-family: Spectral, serif; font-size: clamp(21px,2.1vw,27px); font-weight: 500; line-height: 1.2; margin: 0;">Coloproctologia</h3>
+            </div>
+            <div style="display: grid; gap: 20px;">
+              <div style="display: grid; gap: 8px;">
+                <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Cólon e reto</strong>
+                <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Doença diverticular e diverticulite<br />Doenças inflamatórias intestinais<br />Doenças do cólon e reto com indicação cirúrgica<br />Outras doenças colorretais com indicação cirúrgica</span>
+              </div>
+              <div style="display: grid; gap: 8px;">
+                <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Doenças do ânus</strong>
+                <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Hemorroidas<br />Fissura anal<br />Fístula anal<br />Abscesso perianal</span>
+              </div>
+              <div style="display: grid; gap: 8px;">
+                <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Outras condições</strong>
+                <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Cisto pilonidal<br />Outras doenças do ânus e região perianal</span>
+              </div>
+              <div style="display: grid; gap: 8px;">
+                <strong style="font-size: 11.5px; letter-spacing: .18em; text-transform: uppercase; color: #C6906B;">Cirurgia minimamente invasiva</strong>
+                <span style="font-size: 14.5px; line-height: 1.85; color: #A9B4BA;">Cirurgia colorretal por videolaparoscopia<br />Cirurgia robótica, quando indicada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- bariátrica -->
+      <div id="bariatrica" style="background: #EDE9E3; padding: clamp(48px,7vw,110px) clamp(20px,5vw,72px); display: grid; gap: clamp(28px,4vw,56px);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,320px),1fr)); gap: clamp(28px,4vw,64px); align-items: start;">
+          <div style="display: grid; gap: 20px; animation: af-rise 1s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+            <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">Bariátrica e metabólica</span>
+            <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,3.8vw,48px); line-height: 1.1; margin: 0; letter-spacing: -.02em; color: #0F1417;">Cirurgia Bariátrica e Metabólica</h2>
+            <div style="display: grid; gap: 16px; max-width: 60ch;">
+              <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">A cirurgia bariátrica e metabólica é uma das principais áreas de atuação do Dr. Alberto Fagali.</p>
+              <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">Mais do que a realização de uma cirurgia, o tratamento envolve avaliação individualizada, definição da técnica mais adequada e acompanhamento em todas as etapas.</p>
+              <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">A indicação considera as características clínicas e metabólicas de cada paciente, seus exames, histórico de tratamentos, condições associadas à obesidade e aspectos relacionados à cirurgia.</p>
+              <p style="font-family: Spectral, serif; font-size: clamp(17px,1.7vw,22px); line-height: 1.55; color: #0F1417; margin: 4px 0 0; border-left: 2px solid #A8663C; padding-left: 20px; text-wrap: pretty;">Não existe uma única técnica ideal para todos os pacientes. A escolha entre as diferentes opções deve ser individualizada e discutida durante a avaliação médica.</p>
+            </div>
+            <a href="{{ whatsappUrl }}" style="background: #9F5F35; color: #fff; padding: 18px 30px; font-size: 15px; font-weight: 500; letter-spacing: .04em; min-height: 54px; display: inline-flex; align-items: center; justify-self: start; transition: background .35s ease, transform .35s ease;" style-hover="background: #8E5330; color: #fff; transform: translateY(-2px);">Quero saber se posso fazer a bariátrica</a>
+          </div>
+          <div style="display: grid; gap: 1px; background: #DCD6CE; border: 1px solid #DCD6CE; animation: af-rise 1s cubic-bezier(.2,.7,.2,1) .1s both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+            <div style="background: #F7F5F2; padding: clamp(22px,2.6vw,32px); display: grid; gap: 10px;">
+              <strong style="font-family: Spectral, serif; font-size: 21px; font-weight: 500; color: #0F1417;">Bypass gástrico</strong>
+              <span style="font-size: 15px; line-height: 1.75; color: #5C6A70;">Técnica que associa a redução do tamanho funcional do estômago à alteração do trânsito intestinal, contribuindo para perda de peso e melhora de alterações metabólicas relacionadas à obesidade.</span>
+            </div>
+            <div style="background: #F7F5F2; padding: clamp(22px,2.6vw,32px); display: grid; gap: 10px;">
+              <strong style="font-family: Spectral, serif; font-size: 21px; font-weight: 500; color: #0F1417;">Sleeve gástrico — Gastrectomia Vertical</strong>
+              <span style="font-size: 15px; line-height: 1.75; color: #5C6A70;">Procedimento que reduz o volume do estômago, promovendo saciedade com menor ingestão alimentar e podendo contribuir para a perda de peso e melhora de doenças associadas à obesidade.</span>
+            </div>
+            <div style="background: #F7F5F2; padding: clamp(22px,2.6vw,32px); display: grid; gap: 10px;">
+              <strong style="font-family: Spectral, serif; font-size: 21px; font-weight: 500; color: #0F1417;">Cirurgia revisional</strong>
+              <span style="font-size: 15px; line-height: 1.75; color: #5C6A70;">Indicada em situações específicas, como complicações, alterações anatômicas ou resultados insatisfatórios após cirurgia bariátrica prévia. A avaliação deve considerar individualmente a anatomia, a técnica realizada anteriormente e os objetivos do novo tratamento.</span>
+            </div>
+            <div style="background: #F7F5F2; padding: clamp(22px,2.6vw,32px); display: grid; gap: 10px;">
+              <strong style="font-family: Spectral, serif; font-size: 21px; font-weight: 500; color: #0F1417;">Cirurgia metabólica</strong>
+              <span style="font-size: 15px; line-height: 1.75; color: #5C6A70;">Procedimentos que podem contribuir para o tratamento de doenças metabólicas associadas à obesidade, especialmente em pacientes criteriosamente selecionados.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- refluxo -->
+      <div id="refluxo" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,320px),1fr)); background: #fff;">
+        <div style="overflow: hidden; min-height: clamp(280px,38vw,520px); background: #A8663C;">
+          <img src="assets/mesa-terracota.webp" alt="Consulta" style="width: 100%; height: 100%; object-fit: cover; animation: af-zoom 1.6s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 40%;" />
+        </div>
+        <div style="padding: clamp(40px,6vw,96px) clamp(20px,5vw,72px); display: grid; gap: 20px; align-content: center; animation: af-right 1s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 26%;">
+          <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">Página estratégica</span>
+          <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(28px,3.8vw,48px); line-height: 1.1; margin: 0; letter-spacing: -.02em; color: #0F1417;">Cirurgia do Refluxo e Hérnia de Hiato</h2>
+          <div style="display: grid; gap: 16px; max-width: 58ch;">
+            <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">O refluxo gastroesofágico e a hérnia de hiato podem apresentar diferentes causas, características e graus de gravidade.</p>
+            <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">Quando o tratamento clínico não é suficiente ou existem condições específicas que favorecem a indicação cirúrgica, o paciente deve ser submetido a uma avaliação individualizada.</p>
+            <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">A cirurgia pode ser realizada por técnicas minimamente invasivas, de acordo com as características de cada caso.</p>
+            <p style="font-size: 15.5px; line-height: 1.8; color: #5C6A70; margin: 0; text-wrap: pretty;">A avaliação pré-operatória é fundamental para definir a indicação e a técnica mais adequada.</p>
+          </div>
+          <a href="{{ whatsappUrl }}" style="border: 1px solid #2A363B; color: #0F1417; padding: 17px 30px; font-size: 15px; font-weight: 500; letter-spacing: .04em; min-height: 54px; display: inline-flex; align-items: center; justify-self: start; transition: background .35s ease, color .35s ease;" style-hover="background: #0F1417; color: #F7F5F2;">Agende sua avaliação</a>
+        </div>
+      </div>
+
+      <!-- depoimentos + convênios -->
+      <div style="background: #F7F5F2; padding: clamp(48px,7vw,110px) clamp(20px,5vw,72px); display: grid; gap: clamp(28px,4vw,48px); border-top: 1px solid #E2DCD3;">
+        <div style="display: grid; gap: 12px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+          <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">Depoimentos</span>
+          <h2 style="font-family: Spectral, serif; font-weight: 400; font-size: clamp(26px,3.4vw,42px); line-height: 1.12; margin: 0; letter-spacing: -.02em; color: #0F1417;">O que os pacientes registram no Google</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,260px),1fr)); gap: clamp(14px,1.8vw,24px);">
+          <blockquote style="background: #fff; border: 1px solid #E2DCD3; border-left: 2px solid #A8663C; padding: clamp(22px,2.6vw,32px); margin: 0; display: grid; gap: 14px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+            <p style="font-family: Spectral, serif; font-size: 18px; line-height: 1.6; color: #0F1417; margin: 0;">Depoimento importado da ficha do Google pelo plugin do WordPress.</p>
+            <span style="font-size: 12.5px; color: #6E675C; letter-spacing: .06em;">Paciente · Google Reviews</span>
+          </blockquote>
+          <blockquote style="background: #fff; border: 1px solid #E2DCD3; border-left: 2px solid #A8663C; padding: clamp(22px,2.6vw,32px); margin: 0; display: grid; gap: 14px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .08s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+            <p style="font-family: Spectral, serif; font-size: 18px; line-height: 1.6; color: #0F1417; margin: 0;">Depoimento importado da ficha do Google pelo plugin do WordPress.</p>
+            <span style="font-size: 12.5px; color: #6E675C; letter-spacing: .06em;">Paciente · Google Reviews</span>
+          </blockquote>
+          <blockquote style="background: #fff; border: 1px solid #E2DCD3; border-left: 2px solid #A8663C; padding: clamp(22px,2.6vw,32px); margin: 0; display: grid; gap: 14px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .16s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+            <p style="font-family: Spectral, serif; font-size: 18px; line-height: 1.6; color: #0F1417; margin: 0;">Depoimento importado da ficha do Google pelo plugin do WordPress.</p>
+            <span style="font-size: 12.5px; color: #6E675C; letter-spacing: .06em;">Paciente · Google Reviews</span>
+          </blockquote>
+        </div>
+        <div style="display: grid; gap: 16px; border-top: 1px solid #E2DCD3; padding-top: clamp(24px,3vw,40px); animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+          <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #8E5330;">Convênios atendidos</span>
+          <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+            <span style="border: 1px solid #DCD6CE; background: #fff; padding: 16px 24px; font-size: 14.5px; color: #2A363B;">Bradesco Saúde</span>
+            <span style="border: 1px solid #DCD6CE; background: #fff; padding: 16px 24px; font-size: 14.5px; color: #2A363B;">SulAmérica</span>
+            <span style="border: 1px solid #DCD6CE; background: #fff; padding: 16px 24px; font-size: 14.5px; color: #2A363B;">Mediservice</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- contato -->
+      <div id="contato" style="background: #0F1417; color: #F7F5F2; padding: clamp(48px,7vw,110px) clamp(20px,5vw,72px); display: grid; gap: clamp(28px,4vw,48px);">
+        <div style="display: grid; gap: 12px; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 24%;">
+          <span style="font-size: 11.5px; letter-spacing: .24em; text-transform: uppercase; color: #C6906B;">Localização e contato</span>
+          <h2 style="font-family: Spectral, serif; font-weight: 300; font-size: clamp(28px,4vw,52px); line-height: 1.08; margin: 0; letter-spacing: -.02em;">Duas unidades no Vale do Paraíba</h2>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,280px),1fr)); gap: 1px; background: #26313A; border: 1px solid #26313A;">
+          <div style="background: #141B1F; padding: clamp(26px,3vw,40px); display: grid; gap: 12px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+            <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #C6906B;">São José dos Campos</strong>
+            <span style="font-family: Spectral, serif; font-size: 23px; color: #F7F5F2;">Gastrovale São José dos Campos</span>
+            <span style="font-size: 14.5px; line-height: 1.75; color: #A9B4BA;">Av. Nove de Julho, 685, Sala 51 – Jardim Apolo – Edifício São José Prime – São José dos Campos – SP</span>
+          </div>
+          <div style="background: #141B1F; padding: clamp(26px,3vw,40px); display: grid; gap: 12px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .08s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+            <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #C6906B;">Taubaté</strong>
+            <span style="font-family: Spectral, serif; font-size: 23px; color: #F7F5F2;">Gastrovale Taubaté</span>
+            <span style="font-size: 14.5px; line-height: 1.75; color: #A9B4BA;">Avenida Itália, 928, Sala 1702 – The One Office Tower, Jardim das Nações, Taubaté – SP</span>
+          </div>
+          <div style="background: #141B1F; padding: clamp(26px,3vw,40px); display: grid; gap: 16px; align-content: start; animation: af-rise .9s cubic-bezier(.2,.7,.2,1) .16s both; animation-timeline: view(); animation-range: entry 0% cover 22%;">
+            <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #C6906B;">Contato</strong>
+            <div style="display: grid; gap: 8px; font-size: 14.5px; line-height: 1.7; color: #A9B4BA;">
+              <span>WhatsApp: (12) 99149-3558</span>
+              <span>dralbertofagali@gmail.com</span>
+              <span>Secretaria: segunda a sexta, das 9h às 18h</span>
+            </div>
+            <a href="{{ whatsappUrl }}" style="background: #A8663C; color: #fff; padding: 16px 26px; font-size: 14.5px; font-weight: 500; letter-spacing: .04em; min-height: 52px; display: inline-flex; align-items: center; justify-self: start; transition: background .35s ease;" style-hover="background: #C6906B; color: #0F1417;">Falar no WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- rodapé -->
+      <footer style="background: #0A0E11; color: #A9B4BA; padding: clamp(40px,5vw,72px) clamp(20px,5vw,72px); display: grid; gap: clamp(24px,3vw,40px);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%,260px),1fr)); gap: clamp(24px,3vw,48px); align-items: start;">
+          <svg viewBox="0 0 320 210" style="width: 200px; height: auto; color: #F7F5F2;" role="img" aria-label="Dr. Alberto Fagali">
+            <circle cx="160" cy="52" r="42" fill="none" stroke="currentColor" stroke-width="1.2"></circle>
+            <text x="160" y="53" text-anchor="middle" dominant-baseline="central" font-family="Spectral, serif" font-size="32" letter-spacing="1.5" fill="currentColor">AF</text>
+            <text x="160" y="148" text-anchor="middle" font-family="Spectral, serif" font-size="29" fill="currentColor">Dr. Alberto Fagali</text>
+            <line x1="52" y1="164" x2="268" y2="164" stroke="#C6906B" stroke-width="1"></line>
+            <text x="160" y="186" text-anchor="middle" font-family="Archivo, sans-serif" font-size="10.5" letter-spacing="2.6" fill="#A9B4BA">CIRURGIA DO APARELHO DIGESTIVO</text>
+          </svg>
+          <div style="display: grid; gap: 10px; font-size: 14px; line-height: 1.7;">
+            <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #C6906B; font-weight: 500;">Navegação</strong>
+            <a href="#sobre" style="color: #A9B4BA;" style-hover="color: #F7F5F2;">Sobre</a>
+            <a href="#areas" style="color: #A9B4BA;" style-hover="color: #F7F5F2;">Áreas de atuação</a>
+            <a href="#bariatrica" style="color: #A9B4BA;" style-hover="color: #F7F5F2;">Bariátrica e metabólica</a>
+            <a href="#refluxo" style="color: #A9B4BA;" style-hover="color: #F7F5F2;">Refluxo e hérnia de hiato</a>
+            <a href="#contato" style="color: #A9B4BA;" style-hover="color: #F7F5F2;">Localização e contato</a>
+          </div>
+          <div style="display: grid; gap: 10px; font-size: 14px; line-height: 1.7;">
+            <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #C6906B; font-weight: 500;">Contato</strong>
+            <span>WhatsApp: (12) 99149-3558</span>
+            <span>dralbertofagali@gmail.com</span>
+            <span>Segunda a sexta, 9h às 18h</span>
+          </div>
+          <div style="display: grid; gap: 10px; font-size: 14px; line-height: 1.7;">
+            <strong style="font-size: 11.5px; letter-spacing: .2em; text-transform: uppercase; color: #C6906B; font-weight: 500;">Institucional</strong>
+            <a href="#contato" style="color: #A9B4BA;" style-hover="color: #F7F5F2;">Política de Privacidade</a>
+            <a href="#contato" style="color: #A9B4BA;" style-hover="color: #F7F5F2;">Termos de Uso</a>
+            <a href="#contato" style="color: #A9B4BA;" style-hover="color: #F7F5F2;">Redes sociais</a>
+          </div>
+        </div>
+        <div style="border-top: 1px solid #1C2429; padding-top: 24px; display: grid; gap: 10px; font-size: 13px; line-height: 1.7; color: #7F8D94;">
+          <span style="color: #A9B4BA;">Dr. Alberto João Berra Fagali — CRM SP 135.929 | RQE 564531</span>
+          <span style="max-width: 80ch;">Este site tem caráter informativo e não substitui consulta médica. Resultados podem variar de paciente para paciente.</span>
+        </div>
+      </footer>
+    </div>
+
+    <div style="padding: clamp(32px,4vw,64px) clamp(20px,5vw,72px); display: grid; gap: 8px;">
+      <span style="font-size: 12.5px; line-height: 1.7; color: #6E675C; max-width: 80ch;">Nota: o logotipo desta versão é uma proposta construída a partir do briefing (nome como elemento principal, monograma AF de apoio). Ao receber o manual da marca, substituo os traçados e ajusto cores e tipografia às definições oficiais.</span>
+    </div>
+  </section>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsapp&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5512991493558&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const fone = (this.props.whatsapp ?? '5512991493558').replace(/\D/g, '');
+    return {
+      whatsappUrl: 'https://wa.me/' + fone,
+      noSubmit: (e) => e.preventDefault(),
+    };
+  }
+}
+</script>
+</body>
+</html>
