@@ -17,7 +17,7 @@
 <meta property="og:title" content="Dr. Alberto Fagali — Cirurgião do Aparelho Digestivo" />
 <meta property="og:description" content="Cirurgia do aparelho digestivo, bariátrica e metabólica, com indicação individualizada e acompanhamento próximo em todas as etapas." />
 <meta property="og:url" content="https://www.dralbertofagali.com.br/" />
-<meta property="og:image" content="https://www.dralbertofagali.com.br/assets/retrato-escuro.webp" />
+<meta property="og:image" content="https://www.dralbertofagali.com.br/assets/retrato-aberto.webp" />
 <meta name="twitter:card" content="summary_large_image" />
 
 <link rel="icon" href="assets/logo-simbolo-navy.svg" type="image/svg+xml" />
@@ -26,8 +26,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Archivo:wdth,wght@100..125,400..800&display=swap" rel="stylesheet" />
-<link rel="preload" as="image" href="assets/web/retrato-escuro-1400.webp"
-      imagesrcset="assets/web/retrato-escuro-800.webp 800w, assets/web/retrato-escuro-1400.webp 1400w"
+<link rel="preload" as="image" href="assets/web/retrato-aberto-1400.webp"
+      imagesrcset="assets/web/retrato-aberto-800.webp 800w, assets/web/retrato-aberto-1400.webp 1400w"
       imagesizes="(max-width:760px) 100vw, 50vw" fetchpriority="high" />
 
 <style>
@@ -312,9 +312,15 @@ button,input,textarea,select{font:inherit;color:inherit}
 /* A foto e posicionada de forma absoluta para nao empurrar a altura do
    hero com a propria proporcao (2:3) — quem manda na altura e o 100svh. */
 .hero__media{position:relative;overflow:hidden;background:var(--navy-2);min-height:0}
+/* Veu no topo da foto: mantem o menu branco legivel sobre a imagem clara. */
+.hero__media::after{
+  content:"";position:absolute;left:0;right:0;top:0;z-index:1;pointer-events:none;
+  height:calc(var(--header-h) + 72px);
+  background:linear-gradient(to bottom,rgba(11,29,45,.62),rgba(11,29,45,0));
+}
 .hero__media img{
   position:absolute;inset:0;
-  width:100%;height:100%;object-fit:cover;object-position:50% 18%;
+  width:100%;height:100%;object-fit:cover;object-position:50% 32%;
 }
 .hero__trust{
   display:flex;flex-wrap:wrap;gap:10px 26px;
@@ -370,28 +376,6 @@ button,input,textarea,select{font:inherit;color:inherit}
 .unit .name{font-family:var(--font-display);font-stretch:104%;font-size:20px;font-weight:700;color:var(--off)}
 .unit address{font-style:normal;font-size:14.5px;line-height:1.8;color:var(--on-navy)}
 .unit__links{display:flex;flex-wrap:wrap;gap:18px;padding-top:4px}
-
-/* ---------- Formulario ---------- */
-.form{
-  background:var(--navy-2);padding:clamp(26px,3vw,40px);
-  display:grid;gap:18px;align-content:start;
-}
-.form label{
-  display:grid;gap:8px;
-  font-size:11.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--on-navy);
-}
-.form input,.form textarea,.form select{
-  font-family:var(--font-body);font-size:15px;font-weight:400;letter-spacing:normal;text-transform:none;
-  color:var(--off);background:rgba(255,255,255,.04);
-  border:1px solid var(--navy-line);padding:15px 16px;min-height:52px;
-  outline:none;border-radius:0;-webkit-appearance:none;appearance:none;
-  transition:border-color .3s var(--ease),background .3s var(--ease);
-}
-.form textarea{min-height:auto;resize:vertical}
-.form select option{background:var(--navy-2);color:var(--off)}
-.form ::placeholder{color:#7C8A95;opacity:1}
-.form input:focus,.form textarea:focus,.form select:focus{border-color:var(--gold);background:rgba(255,255,255,.07)}
-.form__note{font-size:12.5px;line-height:1.6;color:var(--on-navy)}
 
 /* ---------- WhatsApp flutuante ---------- */
 .float-wa{
@@ -508,7 +492,6 @@ button,input,textarea,select{font:inherit;color:inherit}
   .quote p{font-size:16px}
 
   /* 16px evita o zoom automatico do iOS ao focar um campo. */
-  .form input,.form textarea,.form select{font-size:16px}
 }
 @media (max-width:560px){
   :root{--header-h:70px}
@@ -521,7 +504,7 @@ button,input,textarea,select{font:inherit;color:inherit}
 }
 
 @media print{
-  .header,.float-wa,.hero__ctas,.form{display:none}
+  .header,.float-wa,.hero__ctas{display:none}
   body{background:#fff}
 }
 </style>
@@ -604,11 +587,11 @@ button,input,textarea,select{font:inherit;color:inherit}
     </div>
 
     <div class="hero__media">
-      <img src="assets/web/retrato-escuro-1400.webp"
-           srcset="assets/web/retrato-escuro-800.webp 800w,
-                   assets/web/retrato-escuro-1400.webp 1400w"
+      <img src="assets/web/retrato-aberto-1400.webp"
+           srcset="assets/web/retrato-aberto-800.webp 800w,
+                   assets/web/retrato-aberto-1400.webp 1400w"
            sizes="(max-width:760px) 100vw, 50vw"
-           alt="Retrato do Dr. Alberto Fagali"
+           alt="Dr. Alberto Fagali sentado, sorrindo"
            width="1400" height="2099" fetchpriority="high" decoding="async" />
     </div>
   </section>
@@ -643,11 +626,11 @@ button,input,textarea,select{font:inherit;color:inherit}
   <section class="section" id="sobre" aria-labelledby="sobre-titulo"
            style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,4vw,64px);align-items:start">
     <div class="reveal reveal-img" style="background:var(--navy)">
-      <img src="assets/web/jaleco-1400.webp"
-           srcset="assets/web/jaleco-800.webp 800w,
-                   assets/web/jaleco-1400.webp 1400w"
+      <img src="assets/web/retrato-2-1400.webp"
+           srcset="assets/web/retrato-2-800.webp 800w,
+                   assets/web/retrato-2-1400.webp 1400w"
            sizes="(max-width:760px) 100vw, 45vw"
-           alt="Dr. Alberto Fagali de jaleco"
+           alt="Retrato do Dr. Alberto Fagali"
            width="1400" height="2101" loading="lazy" decoding="async"
            style="width:100%;aspect-ratio:4/5;object-fit:cover" />
     </div>
@@ -983,44 +966,6 @@ button,input,textarea,select{font:inherit;color:inherit}
            target="_blank" rel="noopener" data-cta="contato-bloco">Falar no WhatsApp</a>
       </div>
     </div>
-
-    <!-- Formulário: monta a mensagem e abre a conversa no WhatsApp da secretaria -->
-    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(20px,2.6vw,36px);align-items:start">
-      <div style="display:grid;gap:16px;align-content:start">
-        <span class="eyebrow">Solicitar contato</span>
-        <h3 class="display t-h3">Prefere que a secretaria retorne?</h3>
-        <p class="body">Preencha os dados ao lado. A mensagem é aberta no WhatsApp já preenchida,
-          e o retorno acontece no horário de funcionamento da secretaria.</p>
-        <p class="body" style="font-size:13.5px">Em caso de urgência, procure atendimento
-          presencial em pronto-socorro.</p>
-      </div>
-
-      <form class="form" id="form-contato" novalidate>
-        <label>Nome completo
-          <input type="text" name="nome" id="f-nome" required autocomplete="name"
-                 placeholder="Como podemos chamar você" />
-        </label>
-        <label>WhatsApp
-          <input type="tel" name="telefone" id="f-tel" required autocomplete="tel"
-                 inputmode="tel" placeholder="(12) 90000-0000" />
-        </label>
-        <label>Unidade de preferência
-          <select name="unidade" id="f-unidade">
-            <option value="São José dos Campos">São José dos Campos</option>
-            <option value="Taubaté">Taubaté</option>
-            <option value="Ainda não sei">Ainda não sei</option>
-          </select>
-        </label>
-        <label>Motivo da consulta
-          <textarea name="motivo" id="f-motivo" rows="3" placeholder="Descreva brevemente"></textarea>
-        </label>
-        <button class="btn btn--gold" type="submit" data-cta="formulario">Enviar pelo WhatsApp</button>
-        <p class="form__note" id="form-msg" role="status" aria-live="polite">
-          Retorno da secretaria de segunda a sexta, das 9h às 18h. Seus dados são usados apenas
-          para o contato solicitado.
-        </p>
-      </form>
-    </div>
   </section>
 </main>
 
@@ -1157,7 +1102,6 @@ button,input,textarea,select{font:inherit;color:inherit}
 <script>
 (function () {
   "use strict";
-  var WHATSAPP = "5512991493558";
 
   /* ---------- Cabeçalho reativo ao scroll ----------
      Transparente sobre o hero, solido depois; recolhe ao descer e
@@ -1276,32 +1220,6 @@ button,input,textarea,select{font:inherit;color:inherit}
     floatWa.classList.add("is-visible");
   }
 
-  /* ---------- Formulário: abre o WhatsApp com a mensagem pronta ---------- */
-  var form = document.getElementById("form-contato");
-  var msg = document.getElementById("form-msg");
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-    var nome = document.getElementById("f-nome").value.trim();
-    var tel = document.getElementById("f-tel").value.trim();
-    var unidade = document.getElementById("f-unidade").value;
-    var motivo = document.getElementById("f-motivo").value.trim();
-
-    if (!nome || !tel) {
-      msg.textContent = "Por favor, preencha nome e WhatsApp para continuarmos.";
-      (nome ? document.getElementById("f-tel") : document.getElementById("f-nome")).focus();
-      return;
-    }
-
-    var texto =
-      "Olá! Gostaria de agendar uma consulta." +
-      "\nNome: " + nome +
-      "\nWhatsApp: " + tel +
-      "\nUnidade: " + unidade +
-      (motivo ? "\nMotivo: " + motivo : "");
-
-    msg.textContent = "Abrindo o WhatsApp com sua mensagem...";
-    window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(texto), "_blank", "noopener");
-  });
 })();
 </script>
 
